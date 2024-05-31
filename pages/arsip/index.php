@@ -44,23 +44,22 @@ include '../../navbar.php';
           <h1>Gambar 1</h1>
         </div>
         <div class="swiper-slide">
-          <img src="../../aset/download.jpg" alt="" />
+          <img class="foto" src="../../aset/download.jpg" alt="" />
           <h1>Gambar 1</h1>
         </div>
         <div class="swiper-slide">
-          <img src="../../aset/download.jpg" alt="" />
+          <img class="foto" src="../../aset/download.jpg" alt="" />
           <h1>Gambar 1</h1>
         </div>
         <div class="swiper-slide">
-          <img src="../../aset/download.jpg" alt="" />
+          <img class="foto" src="../../aset/download.jpg" alt="" />
           <h1>Gambar 1</h1>
         </div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 
