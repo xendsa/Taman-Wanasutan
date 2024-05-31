@@ -11,6 +11,7 @@
         <div class="logo">
             <a href="#">Logo</a>
         </div>
+        <div class="Judul"></div>
     </div>
 </body>
 </html>
