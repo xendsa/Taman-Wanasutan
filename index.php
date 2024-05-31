@@ -24,7 +24,6 @@
     <div class="conten-header"></div>
     <?php include 'navbar.php'; ?>
     <div class="content">   
-        <p>This is the content of the index page.</p>
     </div>
   </body>
 </html>

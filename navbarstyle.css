@@ -2,10 +2,6 @@
     margin-right: 50%;
 }
 
-/* .navbar-nav {
-    background-color: rgb(158, 93, 7);
-} */
-
 .navbar-nav .nav-item .nav-link {
     margin-left: 25px; /* Adjust the margin as needed */
     font-size: large;
@@ -15,7 +11,37 @@
     font-size: 1.2em; /* Adjust the icon size as needed */
 }
 
-/* Optional: Adding some hover effects */
-.navbar-nav .nav-item .nav-link:hover {
-    color: #007bff; /* Change to the desired hover color */
+
+/* Custom Navbar Styles */
+.navbar {
+    background-color: rgba(248, 249, 250, 0.8);; /* Warna latar belakang navbar */
+    border-bottom: 1px solid #b1e994; /* Garis bawah navbar */
+    border-radius: 20px; /* Menghapus border-radius bawaan */
+    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.1); /* Efek bayangan navbar */
 }
+
+.navbar-brand {
+    font-weight: bold; /* Menambah ketebalan font untuk brand */
+}
+
+.navbar-nav .nav-link {
+    color: #495057; /* Warna teks link */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Warna teks link saat dihover */
+}
+
+.navbar-toggler {
+    border: none; /* Menghapus border dari toggler */
+}
+
+.navbar-toggler-icon {
+    color: #007bff; /* Warna ikon toggler */
+}
+
+.navbar-collapse {
+    border-top: 1px solid #dee2e6; /* Garis atas dropdown */
+}
+
+
