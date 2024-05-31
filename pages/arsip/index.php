@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arsip | Taman Wanasutan Asri</title>
+    <link rel="stylesheet" href="css-arsip.css" />
 
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap&amp;subset=latin-ext"
@@ -28,9 +29,19 @@
     <link href="styles.css" rel="stylesheet" />
 
     <link rel="icon" href="images/favicon.png" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
-  <body class="top-of-page" id="page-body">
-    <div class="conten-header"></div>
+
+  <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Taman Wanasutan Arsi</a>
@@ -51,7 +62,7 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" rel="stylesheet" href="pages/arsip/index.php"
+              <a class="nav-link" rel="stylesheet" href="../arsip/index.php"
                 >Arsip</a
               >
             </li>
@@ -59,15 +70,12 @@
               <a
                 class="nav-link"
                 rel="stylesheet"
-                href="pages/flora-fauna/index.php"
+                href="../flora-fauna/index.php"
                 >Flora Fauna</a
               >
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link"
-                rel="stylesheet"
-                href="pages/data-buku/index.php"
+              <a class="nav-link" rel="stylesheet" href="../data-buku/index.php"
                 >Poca Buku</a
               >
             </li>
@@ -75,5 +83,36 @@
         </div>
       </div>
     </nav>
+
+    <div class="content-header">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="../../aset/download.jpg" alt="" />
+            <h1>Gambar 1</h1>
+          </div>
+          <div class="swiper-slide">
+            <img src="../../aset/download.jpg" alt="" />
+            <h1>Gambar 1</h1>
+          </div>
+          <div class="swiper-slide">
+            <img src="../../aset/download.jpg" alt="" />
+            <h1>Gambar 1</h1>
+          </div>
+          <div class="swiper-slide">
+            <img src="../../aset/download.jpg" alt="" />
+            <h1>Gambar 1</h1>
+          </div>
+          <div class="swiper-slide">
+            <img src="../../aset/download.jpg" alt="" />
+            <h1>Gambar 1</h1>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
