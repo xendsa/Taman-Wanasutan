@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flora Fauna Page</title>
-    <link rel="stylesheet" href="">
+    <link href="cssflorafauna.css" rel="stylesheet">
 </head>
 <body>
     <div class="top-action-bar">
