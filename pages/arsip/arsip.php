@@ -18,10 +18,6 @@
     crossorigin="anonymous"></script>
 
   <link rel="icon" href="images/favicon.png" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -65,7 +61,7 @@
         <div class="content">
           <div class="name">Switzerland</div>
           <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-          <button>See More</button>
+          <button>Lihat Detail</button>
         </div>
       </div>
       <div class="item" style="background-image: url(picture/2.png);">
@@ -79,28 +75,28 @@
         <div class="content">
           <div class="name">Iceland</div>
           <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-          <button>See More</button>
+          <button>Lihat Detail</button>
         </div>
       </div>
       <div class="item" style="background-image: url(picture/1.png);">
         <div class="content">
           <div class="name">Australia</div>
           <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-          <button>See More</button>
+          <button>Lihat Detail</button>
         </div>
       </div>
       <div class="item" style="background-image: url(picture/2.png);">
         <div class="content">
           <div class="name">Netherland</div>
           <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-          <button>See More</button>
+          <button>Lihat Detail</button>
         </div>
       </div>
       <div class="item" style="background-image: url(picture/3.png);">
         <div class="content">
           <div class="name">Ireland</div>
           <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-          <button>See More</button>
+          <button>Lihat Detail</button>
         </div>
       </div>
 
@@ -112,6 +108,8 @@
     </div>
 
   </div>
+
+
   <script src="js/script.js"></script>
 </body>
 
