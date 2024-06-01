@@ -18,7 +18,11 @@
         <li class="header">MANAGE</li>
         
         <li><a href="attendance.php"><i class="fa fa-calendar"></i> <span>Attendance</span></a></li>
-        <li><a href="students.php"><i class="fa fa-users"></i> Students</a></li>
+        <li><a href="students.php"><i class="fa fa-users"></i> Karyawan</a></li>
+        <li><a href="flora.php"><i class="fa fa-leaf"></i> <span>Flora</span></a></li>
+        <li><a href="fauna.php"><i class="fa fa-paw"></i> <span>Fauna</span></a></li>
+        <li><a href="arsip.php"><i class="fa fa-archive"></i> <span>Arsip</span></a></li
+
       </ul>
     </section>
     <!-- /.sidebar -->
