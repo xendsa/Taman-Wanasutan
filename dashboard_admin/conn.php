@@ -1,5 +1,5 @@
 <?php
-	$conn = new mysqli('localhost', 'root', '', 'taman');
+	$conn = new mysqli('localhost', 'root', '', 'taman_asri');
 
 	if ($conn->connect_error) {
 	    die("Connection failed: " . $conn->connect_error);
