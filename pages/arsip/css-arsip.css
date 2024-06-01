@@ -64,8 +64,13 @@ body {
   background-color: #fff;
 }
 
+<<<<<<< HEAD
 /* .content-header {
   height: 100%;
+=======
+.content-header {
+  height: 50%;
+>>>>>>> fff5202a6aadf28b7c8e3e1963be7775ea59d608
   position: relative;
   width: 100%;
 } */
@@ -78,13 +83,15 @@ body {
 
 .swiper-wrapper {
   width: 100%;
-  height: 100%;
+  height: 50%;
   background-color: transparent;
 }
 
 .swiper-slide {
   width: 100%;
+  height: 10%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
@@ -102,11 +109,11 @@ body {
 }
 
 .swiper-slide img {
-  display: block;
+  display: flex;
   width: 100%;
-  height: 100%;
-  border: 2px solid var(--blue);
+  height: 50vh;
   border-radius: 1rem;
+  object-fit: contain;
 }
 
 .navbar-brand {
