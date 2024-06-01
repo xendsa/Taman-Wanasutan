@@ -64,16 +64,11 @@ body {
   background-color: #fff;
 }
 
-<<<<<<< HEAD
-/* .content-header {
-  height: 100%;
-=======
 .content-header {
-  height: 50%;
->>>>>>> fff5202a6aadf28b7c8e3e1963be7775ea59d608
+  height: 100%;
   position: relative;
   width: 100%;
-} */
+}
 
 .swiper {
   width: 100%;
