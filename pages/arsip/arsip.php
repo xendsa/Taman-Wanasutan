@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arsip | Taman Wanasutan Asri</title>
   <link rel="stylesheet" href="css-arsip.css" />
-
   <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap&amp;subset=latin-ext"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&amp;display=swap&amp;subset=latin-ext"
@@ -16,7 +15,6 @@
   <script cript src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-
   <link rel="icon" href="images/favicon.png" />
 </head>
 
@@ -33,19 +31,19 @@
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="../../index.php">Home</a>
-            <!-- Menggunakan path "../index.php" untuk menuju ke halaman utama -->
+            <!-- Menggunakan path "../../index.php" untuk menuju ke halaman utama -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" rel="stylesheet" href="arsip.php">Arsip</a>
-            <!-- Tetap menggunakan path "index.php" untuk menuju ke arsip.php -->
+            <a class="nav-link" href="arsip.php">Arsip</a>
+            <!-- Tetap menggunakan path "arsip.php" untuk menuju ke arsip.php -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" rel="stylesheet" href="../flora-fauna/floraFauna.php">Flora Fauna</a>
-            <!-- Menggunakan path "../floraFauna.php" untuk menuju ke floraFauna.php -->
+            <a class="nav-link" href="../flora-fauna/floraFauna.php">Flora Fauna</a>
+            <!-- Menggunakan path "../flora-fauna/floraFauna.php" untuk menuju ke floraFauna.php -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" rel="stylesheet" href="../data-buku/dataBuku.php">Poca Buku</a>
-            <!-- Menggunakan path "../dataBuku.php" untuk menuju ke dataBuku.php -->
+            <a class="nav-link" href="../data-buku/dataBuku.php">Poca Buku</a>
+            <!-- Menggunakan path "../data-buku/dataBuku.php" untuk menuju ke dataBuku.php -->
           </li>
         </ul>
       </div>
@@ -53,10 +51,7 @@
   </nav>
 
   <div class="container">
-
     <div class="slide">
-
-
       <div class="item" style="background-image: url(picture/1.png);">
         <div class="content">
           <div class="name">Switzerland</div>
@@ -99,13 +94,13 @@
           <button>Lihat Detail</button>
         </div>
       </div>
-
     </div>
 
     <div class="button">
       <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
       <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
     </div>
+<<<<<<< HEAD
 
   </div>
 
@@ -117,11 +112,11 @@
     <div class="arsip-kompos">
 
     </div>
+=======
+>>>>>>> 8d37bfbbcc5a37068a7325057bc083e81a36bd86
   </div>
 
   <script src="js/script.js"></script>
-</body>
-
 </body>
 
 </html>
