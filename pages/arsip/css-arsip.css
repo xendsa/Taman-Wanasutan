@@ -66,6 +66,8 @@ html {
   border-bottom: 1px solid #b1e994; /* Garis bawah navbar */
   border-radius: 20px; /* Menghapus border-radius bawaan */
   box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.1); /* Efek bayangan navbar */
+  z-index: 1000;
+  position: relative;
 }
 
 .navbar-brand {
