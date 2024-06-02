@@ -42,11 +42,11 @@
             <!-- Tetap menggunakan path "index.php" untuk menuju ke arsip.php -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" rel="stylesheet" href="../floraFauna.php">Flora Fauna</a>
+            <a class="nav-link" rel="stylesheet" href="pages/flora-fauna/floraFauna.php">Flora Fauna</a>
             <!-- Menggunakan path "../floraFauna.php" untuk menuju ke floraFauna.php -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" rel="stylesheet" href="../dataBuku.php">Poca Buku</a>
+            <a class="nav-link" rel="stylesheet" href="pages/data-buku/dataBuku.php">Poca Buku</a>
             <!-- Menggunakan path "../dataBuku.php" untuk menuju ke dataBuku.php -->
           </li>
         </ul>
