@@ -100,23 +100,8 @@
       <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
       <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
     </div>
-<<<<<<< HEAD
 
-  </div>
-
-  <div class="all-arsips">
-    <div class="arsip-kegiatan">
-
-    </div>
-
-    <div class="arsip-kompos">
-
-    </div>
-=======
->>>>>>> 8d37bfbbcc5a37068a7325057bc083e81a36bd86
-  </div>
-
-  <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
