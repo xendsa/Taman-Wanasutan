@@ -90,9 +90,10 @@ html {
 
 .navbar-collapse {
   border-top: 1px solid #dee2e6; /* Garis atas dropdown */
+  transition: max-height 0.5s ease;
 }
 
-/* Image swiper */
+/* Image Slider */
 * {
   margin: 0;
   padding: 0;
@@ -151,9 +152,11 @@ body {
 .slide .item:nth-child(3) {
   left: 50%;
 }
+
 .slide .item:nth-child(4) {
   left: calc(50% + 220px);
 }
+
 .slide .item:nth-child(5) {
   left: calc(50% + 440px);
 }
