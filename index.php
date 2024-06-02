@@ -34,7 +34,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../index.php">Home</a>
+            <a class="nav-link" aria-current="page" href="index.php">Home</a>
             <!-- Menggunakan path "../index.php" untuk menuju ke halaman utama -->
           </li>
           <li class="nav-item">
