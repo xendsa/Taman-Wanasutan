@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flora Fauna | Taman Wanasutan Asri</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css-florafauna.css">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap&amp;subset=latin-ext"
         rel="stylesheet" />
@@ -29,7 +29,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Taman Wanasutan Arsi</a>
+            <a class="navbar-brand" href="../index.php">Taman Wanasutan Asri</a>
+            <!-- Menggunakan path "../index.php" untuk menuju ke halaman utama -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -37,16 +38,20 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../../index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="../../index.php">Home</a>
+                        <!-- Menggunakan path "../index.php" untuk menuju ke halaman utama -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" rel="stylesheet" href="../arsip/index.php">Arsip</a>
+                        <a class="nav-link" rel="stylesheet" href="../arsip/arsip.php">Arsip</a>
+                        <!-- Tetap menggunakan path "index.php" untuk menuju ke arsip.php -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" rel="stylesheet" href="../flora-fauna/index.php">Flora Fauna</a>
+                        <a class="nav-link" rel="stylesheet" href="../flora-fauna/florafauna.php">Flora Fauna</a>
+                        <!-- Menggunakan path "../floraFauna.php" untuk menuju ke floraFauna.php -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" rel="stylesheet" href="../data-buku/index.php">Poca Buku</a>
+                        <a class="nav-link" rel="stylesheet" href="../data-buku/databuku.php">Poca Buku</a>
+                        <!-- Menggunakan path "../dataBuku.php" untuk menuju ke dataBuku.php -->
                     </li>
                 </ul>
             </div>
