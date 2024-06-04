@@ -101,7 +101,28 @@
       <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
     </div>
 
-    <script src="js/script.js"></script>
+  </div>
+  <div class="all-arsips" style="border-top:1px solid #030303;">
+    <div class="arsip-kegiatan">
+      <h2 class="titel-arsip" style="text-align:center;margin-top:1rem;">Arsip Kegiatan Taman</h2>
+      <div class="cols">
+        <div class="col">
+          <img src="picture/1.png" alt="">
+          <p>Karaoke Bersama</p>
+        </div>
+        <div class="col">
+          <img src="picture/1.png" alt="">
+          <p>Colokan Berjalan 100rb per-menit</p>
+        </div>
+        <div class="col">
+          <img src="picture/1.png" alt="">
+          <p>Pengadaan Tempat Sampah</p>
+          <a href="#" id="detail"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
