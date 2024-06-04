@@ -52,8 +52,8 @@
             </div>
         </div>
     </nav>
-    <button class="flora-btn">Flora</button>
-    <button class="fauna-btn">Fauna</button>
+    <button type="button" class="btn btn-outline-success">Flora</button>
+    <button type="button" class="btn btn-outline-success">Fauna</button>
 </body>
 
 </html>

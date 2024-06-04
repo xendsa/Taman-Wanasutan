@@ -110,18 +110,6 @@ body {
 }
 
 /* button */
-.flora-btn, .fauna-btn {
-  position: absolute;
-  top: 60px;
-  left: 10px;
-  padding: 10px 20px;
-  background-color: #008CBA;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.flora-btn:hover, .fauna-btn:hover {
-  background-color: #007bff;
+.btn-outline-success{
+  padding-top: 20px;
 }
