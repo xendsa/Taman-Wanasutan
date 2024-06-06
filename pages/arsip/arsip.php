@@ -6,16 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arsip | Taman Wanasutan Asri</title>
   <link rel="stylesheet" href="css-arsip.css" />
+
   <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap&amp;subset=latin-ext"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&amp;display=swap&amp;subset=latin-ext"
     rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-  <script cript src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+
   <link rel="icon" href="images/favicon.png" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -31,19 +34,19 @@
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="../../index.php">Home</a>
-            <!-- Menggunakan path "../../index.php" untuk menuju ke halaman utama -->
+            <!-- Menggunakan path "../index.php" untuk menuju ke halaman utama -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="arsip.php">Arsip</a>
-            <!-- Tetap menggunakan path "arsip.php" untuk menuju ke arsip.php -->
+            <a class="nav-link" rel="stylesheet" href="arsip.php">Arsip</a>
+            <!-- Tetap menggunakan path "index.php" untuk menuju ke arsip.php -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../flora-fauna/floraFauna.php">Flora Fauna</a>
-            <!-- Menggunakan path "../flora-fauna/floraFauna.php" untuk menuju ke floraFauna.php -->
+            <a class="nav-link" rel="stylesheet" href="../flora-fauna/floraFauna.php">Flora Fauna</a>
+            <!-- Menggunakan path "../floraFauna.php" untuk menuju ke floraFauna.php -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../data-buku/dataBuku.php">Poca Buku</a>
-            <!-- Menggunakan path "../data-buku/dataBuku.php" untuk menuju ke dataBuku.php -->
+            <a class="nav-link" rel="stylesheet" href="../data-buku/dataBuku.php">Poca Buku</a>
+            <!-- Menggunakan path "../dataBuku.php" untuk menuju ke dataBuku.php -->
           </li>
         </ul>
       </div>
@@ -94,6 +97,7 @@
           <button>Lihat Detail</button>
         </div>
       </div>
+
     </div>
 
     <div class="button">
@@ -102,26 +106,68 @@
     </div>
 
   </div>
-  <div class="all-arsips" style="border-top:1px solid #030303;">
+
+  <div class="all-arsips">
     <div class="arsip-kegiatan">
-      <h2 class="titel-arsip" style="text-align:center;margin-top:1rem;">Arsip Kegiatan Taman</h2>
+      <h2 class="titel-arsip">Arsip Kegiatan Taman</h2>
       <div class="cols">
         <div class="col">
-          <img src="picture/1.png" alt="">
-          <p>Karaoke Bersama</p>
+          <img src="picture/h.jpg" alt="">
+          <div class="desc">
+            <h2>Nama Kegiatan</h2>
+            <a href="#">Lihat Detail</a>
+          </div>
         </div>
         <div class="col">
-          <img src="picture/1.png" alt="">
-          <p>Colokan Berjalan 100rb per-menit</p>
+          <img src="picture/i.jpg" alt="">
+          <div class="desc">
+            <h2>Nama Kegiatan</h2>
+            <a href="#">Lihat Detail</a>
+          </div>
         </div>
         <div class="col">
-          <img src="picture/1.png" alt="">
-          <p>Pengadaan Tempat Sampah</p>
-          <a href="#" id="detail"></a>
+          <img src="picture/j.jpg" alt="">
+          <div class="desc">
+            <h2>Nama Kegiatan</h2>
+            <a href="#">Lihat Detail</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="footer">
+    <div class="top">
+      <div class="footer-link">
+        <h2>Content</h2>
+        <div class="links">
+          <a href="#">Halaman utama</a>
+          <a href="#">Arsip Kegiatan</a>
+          <a href="#">Arsip Kompos</a>
+          <a href="#">Arsip Event</a>
+        </div>
+      </div>
+      <div class="informations">
+        <h2>Informasi</h2>
+        <div class="links">
+          <a href="#">Informasi Umum</a>
+          <a href="#">Informasi Kegiatan Terdekat</a>
+          <a href="#">Informasi Event</a>
+        </div>
+      </div>
+      <div class="sosial-media">
+        <h2>Sosial Media</h2>
+        <div class="links">
+          <a href="#"><i class="ri-instagram-fill"></i> Instagram</a>
+          <a href="#"><i class="ri-tiktok-fill"></i> TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+
+    </div>
+  </div>
+
   <script src="js/script.js"></script>
 </body>
 

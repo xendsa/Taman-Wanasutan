@@ -5,7 +5,7 @@
           	<div class="modal-header">
             	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
               		<span aria-hidden="true">&times;</span></button>
-            	<h4 class="modal-title"><b>Add Students</b></h4>
+            	<h4 class="modal-title"><b>Tambah Karyawan</b></h4>
           	</div>
           	<div class="modal-body">
             	<form class="form-horizontal" method="POST" action="employee_add.php" enctype="multipart/form-data">
@@ -217,7 +217,7 @@
             	<form class="form-horizontal" method="POST" action="employee_delete.php">
             		<input type="hidden" class="empid" name="id">
             		<div class="text-center">
-	                	<p>DELETE STUDENT</p>
+	                	<p>Hapus Karyawan</p>
 	                	<h2 class="bold del_student_name"></h2>
 	            	</div>
           	</div>

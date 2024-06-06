@@ -68,7 +68,7 @@
                 <thead>
                   <th class="hidden"></th>
                   <th>Date</th>
-                  <th>Students ID</th>
+                  <th>Karyawan ID</th>
                   <th>Full Name</th>
                   <th>Temp</th>
                   <th>Tag</th>

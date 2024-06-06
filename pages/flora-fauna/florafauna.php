@@ -30,7 +30,6 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="../index.php">Taman Wanasutan Asri</a>
-            <!-- Menggunakan path "../index.php" untuk menuju ke halaman utama -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -39,24 +38,22 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="../../index.php">Home</a>
-                        <!-- Menggunakan path "../index.php" untuk menuju ke halaman utama -->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" rel="stylesheet" href="../arsip/arsip.php">Arsip</a>
-                        <!-- Tetap menggunakan path "index.php" untuk menuju ke arsip.php -->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" rel="stylesheet" href="../flora-fauna/florafauna.php">Flora Fauna</a>
-                        <!-- Menggunakan path "../floraFauna.php" untuk menuju ke floraFauna.php -->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" rel="stylesheet" href="../data-buku/databuku.php">Poca Buku</a>
-                        <!-- Menggunakan path "../dataBuku.php" untuk menuju ke dataBuku.php -->
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <button type="button" class="btn btn-outline-success">Flora</button>
+    <button type="button" class="btn btn-outline-success">Fauna</button>
 </body>
 
 </html>
