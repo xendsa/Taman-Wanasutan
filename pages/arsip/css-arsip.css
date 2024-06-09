@@ -19,7 +19,7 @@
   --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
-  --light: #f8f9fa;
+  --light: #d7d7d7;
   --dark: #343a40;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
@@ -47,52 +47,53 @@ html {
   width: 100%;
 }
 
+/* Custom Navbar Styles */
+
 .navbar-brand {
   margin-right: 50%;
   width: 63.1%;
 }
 
 .navbar-nav .nav-item .nav-link {
-  margin-left: 25px; /* Adjust the margin as needed */
+  margin-left: 25px;
   font-size: large;
 }
 
 .navbar-nav .nav-item .nav-link i {
-  font-size: 1.2em; /* Adjust the icon size as needed */
+  font-size: 1.2em;
 }
 
-/* Custom Navbar Styles */
 .navbar {
-  background-color: rgba(248, 249, 250, 0.8); /* Warna latar belakang navbar */
-  border-bottom: 1px solid #b1e994; /* Garis bawah navbar */
-  border-radius: 20px; /* Menghapus border-radius bawaan */
-  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.1); /* Efek bayangan navbar */
+  background-color: rgba(248, 249, 250, 0.8);
+  border-bottom: 1px solid #b1e994;
+  border-radius: 20px;
+  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   position: relative;
 }
 
 .navbar-brand {
-  font-weight: bold; /* Menambah ketebalan font untuk brand */
+  font-weight: bold;
 }
 
 .navbar-nav .nav-link {
-  color: #495057; /* Warna teks link */
+  color: #495057;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #007bff; /* Warna teks link saat dihover */
+  color: #007bff;
 }
 
 .navbar-toggler {
-  border: none; /* Menghapus border dari toggler */
+  border: none;
 }
 
 .navbar-toggler-icon {
-  color: #007bff; /* Warna ikon toggler */
+  color: #007bff;
 }
 
 .navbar-collapse {
-  border-top: 1px solid #dee2e6; /* Garis atas dropdown */
+  border-top: 1px solid #dee2e6;
   transition: max-height 0.5s ease;
 }
 
@@ -118,16 +119,17 @@ body {
   background-color: #fff;
 }
 
+/* Slide Container Style Custom */
+
 .container {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 1000px;
-  height: 600px;
+  height: 700px;
   background: #f5f5f5;
-  box-shadow: 0 30px 50px #dbdbdb;
-  margin-top: 2rem;
+  box-shadow: 10px 30px 40px #bbbbbb;
 }
 
 .container .slide .item {
@@ -165,7 +167,6 @@ body {
   left: calc(50% + 440px);
 }
 
-/* here n = 0, 1, 2, 3,... */
 .slide .item:nth-child(n + 6) {
   left: calc(50% + 660px);
   opacity: 0;
@@ -247,11 +248,14 @@ body {
   color: #fff;
 }
 
+/* All Arsips Style Custom start */
+
 .all-arsips {
   box-sizing: border-box;
   position: relative;
   height: 100%;
-  top: 100%;
+  top: 110%;
+  left: auto;
   padding: 1rem;
 }
 
@@ -336,29 +340,40 @@ body {
   width: 90%;
 }
 
+/* All Arsips Style Custom end */
+
+/* Footer Style Custom Start */
+
 .footer {
   position: relative;
   top: 100%;
   bottom: 0;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   padding: 2rem;
   width: 100%;
   background: var(--dark);
 }
 
-.footer .footer-link h2,
-.footer .informations h2,
-.footer .sosial-media h2 {
+.footer .top {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  width: 100%;
+}
+
+.footer .top .footer-link h2,
+.footer .top .informations h2,
+.footer .top .sosial-media h2 {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 2px;
   color: var(--bg);
 }
 
-.footer .footer-link a,
-.footer .informations a,
-.footer .sosial-media a {
+.footer .top .footer-link .links a,
+.footer .top .informations .links a,
+.footer .top .sosial-media .links a {
   text-decoration: none;
   color: var(--light);
   font-size: 1.1rem;
@@ -366,43 +381,23 @@ body {
   align-items: center;
 }
 
-.footer .footer-link a:hover,
-.footer .informations a:hover,
-.footer .sosial-media a:hover {
+.footer .top .footer-link .links a:hover,
+.footer .top .informations .links a:hover,
+.footer .top .sosial-media .links a:hover {
   text-decoration: underline;
   color: var(--info);
 }
 
-.footer .footer-link {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.footer .footer-link .links {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.footer .informations {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.footer .informations .links {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
+.footer .footer-link,
+.footer .informations,
 .footer .sosial-media {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
+.footer .footer-link .links,
+.footer .informations .links,
 .footer .sosial-media .links {
   display: flex;
   flex-direction: column;
@@ -414,3 +409,44 @@ body {
   color: var(--light);
   margin-right: 0.5rem;
 }
+
+.footer .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--gray);
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  box-shadow: #e7e7e79d 2px 2px 5px;
+}
+
+.footer .bottom a {
+  color: var(--light);
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-family: "Open Sans" sans-serif;
+}
+
+.footer .bottom .back-btn {
+  color: var(--secondary);
+  background-color: var(--info);
+  border-radius: 50%;
+  height: 50%;
+  width: fit-content;
+  padding: 0 0.22rem;
+  letter-spacing: normal;
+  font-size: 1.3rem;
+}
+
+.footer .back-btn i {
+  display: flex;
+  font-size: 1.3rem;
+  color: #000;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Footer Style Custom end */

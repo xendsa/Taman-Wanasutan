@@ -22,7 +22,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="../index.php">Taman Wanasutan Asri</a>
       <!-- Menggunakan path "../index.php" untuk menuju ke halaman utama -->
@@ -53,7 +53,7 @@
     </div>
   </nav>
 
-  <div class="container">
+  <div class="container" id="dashboard">
     <div class="slide">
       <div class="item" style="background-image: url(picture/1.png);">
         <div class="content">
@@ -107,7 +107,7 @@
 
   </div>
 
-  <div class="all-arsips">
+  <div class="all-arsips" id="all-arsips">
     <div class="arsip-kegiatan">
       <h2 class="titel-arsip">Arsip Kegiatan Taman</h2>
       <div class="cols">
@@ -141,30 +141,30 @@
       <div class="footer-link">
         <h2>Content</h2>
         <div class="links">
-          <a href="#">Halaman utama</a>
-          <a href="#">Arsip Kegiatan</a>
-          <a href="#">Arsip Kompos</a>
-          <a href="#">Arsip Event</a>
+          <a href="#dashboard">Halaman utama</a>
+          <a href="#arsip-kegiatan">Arsip Kegiatan</a>
+          <a href="#arsip-kompos">Arsip Kompos</a>
+          <a href="#arsip-event">Arsip Event</a>
         </div>
       </div>
       <div class="informations">
         <h2>Informasi</h2>
         <div class="links">
-          <a href="#">Informasi Umum</a>
-          <a href="#">Informasi Kegiatan Terdekat</a>
-          <a href="#">Informasi Event</a>
+          <a href="#all-arsips">Informasi Umum</a>
         </div>
       </div>
       <div class="sosial-media">
         <h2>Sosial Media</h2>
         <div class="links">
-          <a href="#"><i class="ri-instagram-fill"></i> Instagram</a>
-          <a href="#"><i class="ri-tiktok-fill"></i> TikTok</a>
+          <a href="#" id="instagram-btn"><i class="ri-instagram-fill"></i>
+            Instagram</a>
+          <a href="#" id="tiktok-btn"><i class="ri-tiktok-fill"></i> TikTok</a>
         </div>
       </div>
     </div>
     <div class="bottom">
-
+      <a href="../../index.php">Taman Wanasutan</a>
+      <a href="arsip.php#navbar" class="back-btn"><i class="ri-arrow-up-s-fill"></i></a>
     </div>
   </div>
 
