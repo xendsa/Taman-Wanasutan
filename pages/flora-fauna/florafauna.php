@@ -52,8 +52,48 @@
             </div>
         </div>
     </nav>
-    <button type="button" class="btn btn-outline-success">Flora</button>
-    <button type="button" class="btn btn-outline-success">Fauna</button>
+
+    <div class="container">
+
+        <div class="button-container">
+            <button type="button" class="btn btn-outline-success">Flora</button>
+            <button type="button" class="btn btn-outline-success">Fauna</button>
+        </div>
+
+        <div class="flora-container">
+
+            <div class="flora" data-name="flora">
+                <img src="picture/1.jpg" alt="">
+                <h3>Pohon 1</h3>
+            </div>
+
+            <div class="flora" data-name="flora">
+                <img src="picture/2.jpeg" alt="">
+                <h3>Pohon 1</h3>
+            </div>
+
+            <div class="flora" data-name="flora">
+                <img src="picture/3.jpg" alt="">
+                <h3>Pohon 1</h3>
+            </div>
+
+            <div class="flora" data-name="flora">
+                <img src="picture/1.jpg" alt="">
+                <h3>Pohon 1</h3>
+            </div>
+
+            <div class="flora" data-name="flora">
+                <img src="picture/2.jpeg" alt="">
+                <h3>Pohon 1</h3>
+            </div>
+
+            <div class="flora" data-name="flora">
+                <img src="picture/3.jpg" alt="">
+                <h3>Pohon 1</h3>
+            </div>
+
+        </div>
+    </div>
 </body>
 
 </html>

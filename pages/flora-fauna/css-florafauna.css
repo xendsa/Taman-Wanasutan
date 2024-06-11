@@ -110,6 +110,57 @@ body {
 }
 
 /* button */
-.btn-outline-success{
-  padding-top: 20px;
+.button-container{
+  position: absolute;
+  top: 80px;
+  left: 20px;
+}
+
+.button-container .btn {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* container flora fauna */
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.container .flora-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1rem;
+}
+
+.container .flora-container .flora{
+  text-align: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  cursor: pointer;
+}
+
+.container .flora-container .flora img{
+  height: 25rem;
+  max-width: 100%;
+  margin: 0;
+  transition: all 0.3s;
+}
+
+.container .flora-container .flora:hover img{
+  transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+}
+
+.container .flora-container .flora h3{
+  padding: .5rem 0;
+  font-size: 2rem;
+  color: #495057;
+}
+
+.container .flora-container .flora:hover h3{
+  color: #28a745;
 }
