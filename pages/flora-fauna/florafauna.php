@@ -73,7 +73,7 @@
             </div>
 
             <div class="flora" data-name="flora">
-                <img src="picture/3.jpg" alt="">
+                <img src="picture/1.jpg" alt="">
                 <h3>Pohon 1</h3>
             </div>
 
@@ -88,7 +88,7 @@
             </div>
 
             <div class="flora" data-name="flora">
-                <img src="picture/3.jpg" alt="">
+                <img src="picture/1.jpg" alt="">
                 <h3>Pohon 1</h3>
             </div>
 

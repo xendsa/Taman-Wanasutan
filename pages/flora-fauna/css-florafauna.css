@@ -124,26 +124,39 @@ body {
 /* container flora fauna */
 .container{
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   padding: 3rem 2rem;
+  background-color: #20c997;
+}
+
+.container .button-container{
+  margin-bottom: 3rem;
+  margin-left: 10rem;
+  background-color: #b1e994;
+}
+
+.button-container{
+  padding: auto;
 }
 
 .container .flora-container{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  margin-top: 4rem;
+  background-color: #007bff;
+  gap: 0.5rem;
 }
 
 .container .flora-container .flora{
   text-align: center;
-  padding: 1rem;
+  padding: 3rem 2rem;
   background-color: #f8f9fa;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
   cursor: pointer;
 }
 
 .container .flora-container .flora img{
-  height: 25rem;
+  height: 20rem;
   max-width: 100%;
   margin: 0;
   transition: all 0.3s;
