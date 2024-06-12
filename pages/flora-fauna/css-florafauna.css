@@ -110,7 +110,7 @@ body {
 }
 
 /* button */
-.button-container{
+.button-container {
   position: absolute;
   top: 80px;
   left: 20px;
@@ -122,7 +122,7 @@ body {
 }
 
 /* container flora fauna */
-.container{
+.container {
   max-width: 1200px;
   margin: auto;
   padding: 3rem 2rem;
@@ -130,20 +130,21 @@ body {
   align-items: center;
 }
 
-.button-container{
+.button-container {
   top: 10px; /* Adjust as needed */
   left: 10px; /* Adjust as needed */
   z-index: 10; /* Ensure it's above other elements */
 }
 
-.container .flora-container{
-  display: grid;
+/* flora container start */
+.container .flora-container {
+  display: none;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   margin-top: 4rem;
   gap: 0.5rem;
 }
 
-.container .flora-container .flora{
+.container .flora-container .flora {
   text-align: center;
   padding: 3rem 2rem;
   background-color: #f8f9fa;
@@ -151,31 +152,70 @@ body {
   cursor: pointer;
 }
 
-.container .flora-container .flora img{
+.container .flora-container .flora img {
   height: 20rem;
   max-width: 100%;
   margin: 0;
   transition: all 0.3s;
 }
 
-.container .flora-container .flora:hover img{
+.container .flora-container .flora:hover img {
   transform: scale(1.05);
   -moz-transform: scale(1.05);
   -webkit-transform: scale(1.05);
 }
 
-.container .flora-container .flora h3{
+.container .flora-container .flora h3 {
   padding: .5rem 0;
   font-size: 2rem;
   color: #495057;
 }
 
-.container .flora-container .flora:hover h3{
+.container .flora-container .flora:hover h3 {
+  color: #28a745;
+}
+/* flora container end */
+
+/* fauna container start */
+.container .fauna-container {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  margin-top: 4rem;
+  gap: 0.5rem;
+}
+
+.container .fauna-container .fauna {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #f8f9fa;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  cursor: pointer;
+}
+
+.container .fauna-container .fauna img {
+  height: 20rem;
+  max-width: 100%;
+  margin: 0;
+  transition: all 0.3s;
+}
+
+.container .fauna-container .fauna:hover img {
+  transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+}
+
+.container .fauna-container .fauna h3 {
+  padding: .5rem 0;
+  font-size: 2rem;
+  color: #495057;
+}
+
+.container .fauna-container .fauna:hover h3 {
   color: #28a745;
 }
 
 /* Footer Style Custom Start */
-
 .footer {
   position: relative;
   top: 100%;
@@ -280,5 +320,4 @@ body {
   text-align: center;
   justify-content: center;
 }
-
 /* Footer Style Custom end */

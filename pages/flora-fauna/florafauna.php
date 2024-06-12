@@ -56,8 +56,8 @@
     <div class="container">
 
         <div class="button-container">
-            <button type="button" class="btn btn-outline-success">Flora</button>
-            <button type="button" class="btn btn-outline-success">Fauna</button>
+            <button type="button" class="btn btn-outline-success" id="flora-btn">Flora</button>
+            <button type="button" class="btn btn-outline-success" id="fauna-btn">Fauna</button>
         </div>
 
         <div class="flora-container">
@@ -93,39 +93,76 @@
             </div>
 
         </div>
+
+        <div class="fauna-container">
+
+            <div class="fauna" data-name="fauna">
+                <img src="picture/cats.jpg" alt="">
+                <h3>Fauna 1</h3>
+            </div>
+
+            <div class="fauna" data-name="fauna">
+                <img src="picture/panda.jpeg" alt="">
+                <h3>Fauna 1</h3>
+            </div>
+
+            <div class="fauna" data-name="fauna">
+                <img src="picture/rabbit.jpg" alt="">
+                <h3>Fauna 1</h3>
+            </div>
+
+            <div class="fauna" data-name="fauna">
+                <img src="picture/cats.jpg" alt="">
+                <h3>Fauna 1</h3>
+            </div>
+
+            <div class="fauna" data-name="fauna">
+                <img src="picture/panda.jpeg" alt="">
+                <h3>Fauna 1</h3>
+            </div>
+
+            <div class="fauna" data-name="fauna">
+                <img src="picture/rabbit.jpg" alt="">
+                <h3>Fauna 1</h3>
+            </div>
+
+
+        </div>
     </div>
 
     <div class="footer">
-    <div class="top">
-      <div class="footer-link">
-        <h2>Content</h2>
-        <div class="links">
-          <a href="#dashboard">Halaman utama</a>
-          <a href="#arsip-kegiatan">Arsip Kegiatan</a>
-          <a href="#arsip-kompos">Arsip Kompos</a>
-          <a href="#arsip-event">Arsip Event</a>
+        <div class="top">
+            <div class="footer-link">
+                <h2>Content</h2>
+                <div class="links">
+                    <a href="#dashboard">Halaman utama</a>
+                    <a href="#arsip-kegiatan">Arsip Kegiatan</a>
+                    <a href="#arsip-kompos">Arsip Kompos</a>
+                    <a href="#arsip-event">Arsip Event</a>
+                </div>
+            </div>
+            <div class="informations">
+                <h2>Informasi</h2>
+                <div class="links">
+                    <a href="#all-arsips">Informasi Umum</a>
+                </div>
+            </div>
+            <div class="sosial-media">
+                <h2>Sosial Media</h2>
+                <div class="links">
+                    <a href="#" id="instagram-btn"><i class="ri-instagram-fill"></i>
+                        Instagram</a>
+                    <a href="#" id="tiktok-btn"><i class="ri-tiktok-fill"></i> TikTok</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="informations">
-        <h2>Informasi</h2>
-        <div class="links">
-          <a href="#all-arsips">Informasi Umum</a>
+        <div class="bottom">
+            <a href="../../index.php">Taman Wanasutan</a>
+            <a href="arsip.php#navbar" class="back-btn"><i class="ri-arrow-up-s-fill"></i></a>
         </div>
-      </div>
-      <div class="sosial-media">
-        <h2>Sosial Media</h2>
-        <div class="links">
-          <a href="#" id="instagram-btn"><i class="ri-instagram-fill"></i>
-            Instagram</a>
-          <a href="#" id="tiktok-btn"><i class="ri-tiktok-fill"></i> TikTok</a>
-        </div>
-      </div>
     </div>
-    <div class="bottom">
-      <a href="../../index.php">Taman Wanasutan</a>
-      <a href="arsip.php#navbar" class="back-btn"><i class="ri-arrow-up-s-fill"></i></a>
-    </div>
-  </div>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
