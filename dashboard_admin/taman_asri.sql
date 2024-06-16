@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 01, 2024 at 05:26 PM
+-- Generation Time: Jun 14, 2024 at 05:01 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -42,7 +42,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `firstname`, `lastname`, `photo`, `created_on`) VALUES
-(1, 'CodeLytical', 'admin123', 'Nathaniel', 'Nkrumah', 'desktop.jpg', '2018-04-30');
+(1, 'admin', 'admin123', 'admin', 'wanasutan', 'desktop.jpg', '2024-06-14');
 
 -- --------------------------------------------------------
 
@@ -122,6 +122,17 @@ CREATE TABLE `flora` (
   `status_konservasi` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `flora`
+--
+
+INSERT INTO `flora` (`id_flora`, `nama`, `deskripsi`, `jumlah`, `habitat`, `status_konservasi`) VALUES
+(1, 'Rafflesia arnoldii', 'Largest individual flower on earth', 10, 'Rainforest', 'Endangered'),
+(2, 'Nepenthes rajah', 'Carnivorous plant', 5, 'Mountains', 'Vulnerable'),
+(3, 'Titan arum', 'Has the largest unbranched inflorescence in the world', 3, 'Tropical forests', 'Threatened'),
+(4, 'Baobab', 'Adansonia tree, known for its massive trunk', 20, 'Savanna', 'Least Concern'),
+(5, 'Welwitschia', 'Very unusual, long-lived plant', 7, 'Deserts', 'Near Threatened');
+
 -- --------------------------------------------------------
 
 --
@@ -149,8 +160,7 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`id`, `reference_number`, `firstname`, `mname`, `lastname`, `email`, `phone`, `residence_status`, `residence`, `programme`, `admission_year`, `level`, `created_on`) VALUES
-(1, '9100609620', 'Bridget', '', 'Gafa', 'mra@gmail.com', '1230444444', 'Resident', 'Michael Kofi Avenue', 'Minerals Engineering', '2020', '2', '2021-02-08'),
-(2, '9100709721', 'Nathaniel', '', 'Nkrumah', 'knat@gmail.com', '0123456783', 'Non-Resident', '', 'Computer Science', '2020', '2', '2022-10-19');
+(1, '9100609620', 'Bridget', '', 'Gafa', 'mra@gmail.com', '1230444444', 'Resident', 'Michael Kofi Avenue', 'Minerals Engineering', '2020', '2', '2021-02-08');
 
 --
 -- Indexes for dumped tables
@@ -206,7 +216,7 @@ ALTER TABLE `fauna`
 -- AUTO_INCREMENT for table `flora`
 --
 ALTER TABLE `flora`
-  MODIFY `id_flora` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_flora` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
