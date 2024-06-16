@@ -79,7 +79,7 @@ body {
 
 /* Custom Navbar Styles */
 .navbar {
-  background-color: rgba(248, 249, 250, 0.8); /* Warna latar belakang navbar */
+  background-color: rgba(43, 231, 87, 0.8); /* Warna latar belakang navbar */
   border-bottom: 1px solid #b1e994; /* Garis bawah navbar */
   border-radius: 20px; /* Menghapus border-radius bawaan */
   box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.1); /* Efek bayangan navbar */
@@ -110,7 +110,7 @@ body {
 }
 
 /* button */
-.button-container {
+.button-container{
   position: absolute;
   top: 80px;
   left: 20px;
@@ -122,7 +122,7 @@ body {
 }
 
 /* container flora fauna */
-.container {
+.container{
   max-width: 1200px;
   margin: auto;
   padding: 3rem 2rem;
@@ -130,101 +130,168 @@ body {
   align-items: center;
 }
 
-.button-container {
+.button-container{
   top: 10px; /* Adjust as needed */
   left: 10px; /* Adjust as needed */
   z-index: 10; /* Ensure it's above other elements */
 }
 
 /* flora container start */
-.container .flora-container {
-  display: none;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+.container .flora-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 4rem;
   gap: 0.5rem;
 }
 
-.container .flora-container .flora {
+.container .flora-container .flora{
   text-align: center;
-  padding: 3rem 2rem;
+  padding: 1rem 0.5rem;
   background-color: #f8f9fa;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
   cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
-.container .flora-container .flora img {
-  height: 20rem;
+.container .flora-container .flora img{
+  height: 12rem;
   max-width: 100%;
   margin: 0;
   transition: all 0.3s;
 }
 
-.container .flora-container .flora:hover img {
+.container .flora-container .flora:hover img{
   transform: scale(1.05);
   -moz-transform: scale(1.05);
   -webkit-transform: scale(1.05);
 }
 
-.container .flora-container .flora h3 {
+.container .flora-container .flora h3{
   padding: .5rem 0;
   font-size: 2rem;
   color: #495057;
+  display: none;
 }
 
-.container .flora-container .flora:hover h3 {
+.container .flora-container .flora:hover h3{
   color: #28a745;
 }
 /* flora container end */
 
 /* fauna container start */
-.container .fauna-container {
-  display: none;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+.container .fauna-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 4rem;
   gap: 0.5rem;
 }
 
-.container .fauna-container .fauna {
+.container .fauna-container .fauna{
   text-align: center;
-  padding: 3rem 2rem;
+  padding: 1rem 0.5rem;
   background-color: #f8f9fa;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
   cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
-.container .fauna-container .fauna img {
-  height: 20rem;
-  max-width: 100%;
+.container .fauna-container .fauna img{
+  height: 12rem;
+  max-width: 95%;
   margin: 0;
+  object-fit: cover;
   transition: all 0.3s;
 }
 
-.container .fauna-container .fauna:hover img {
+.container .fauna-container .fauna:hover img{
   transform: scale(1.05);
   -moz-transform: scale(1.05);
   -webkit-transform: scale(1.05);
 }
 
-.container .fauna-container .fauna h3 {
+.container .fauna-container .fauna h3{
   padding: .5rem 0;
+  display: none;
   font-size: 2rem;
   color: #495057;
 }
 
-.container .fauna-container .fauna:hover h3 {
+.container .fauna-container .fauna:hover h3{
   color: #28a745;
 }
 
+/* sample container start */
+.sample-container-1{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 75%;
+  border-radius: 10%;
+  margin-top: 7%;
+}
+
+.sample-container-1 .text{
+  text-align: justify;
+  text-size-adjust: 1sf;
+  flex: 1;
+  background-color: #D8EFD3;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.sample-container-1 .image{
+  flex: 1;
+  background: url('picture/1.jpg');
+  background-size: cover;
+  margin-left: 7%;
+  border-top-left-radius: 15%;
+  border-bottom-left-radius: 15%;
+}
+
+/* sample-container-1 */
+.sample-container-2{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 75%;
+  border-radius: 10%;
+}
+
+.sample-container-2 .text{
+  text-align: justify;
+  text-size-adjust: 1sf;
+  flex: 1;
+  background-color: #A7E6FF;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.sample-container-2 .image{
+  flex: 1;
+  background: url('picture/cats.jpg');
+  background-size: cover;
+  margin-right: 7%;
+  border-top-right-radius: 15%;
+  border-bottom-right-radius: 15%;
+}
+
+
 /* Footer Style Custom Start */
+
 .footer {
   position: relative;
-  top: 100%;
+  top: 25%;
   bottom: 0;
   display: flex;
   flex-direction: column;
   padding: 2rem;
   width: 100%;
-  background: var(--dark);
+  background: #95D2B3;
 }
 
 .footer .top {
@@ -320,4 +387,5 @@ body {
   text-align: center;
   justify-content: center;
 }
+
 /* Footer Style Custom end */

@@ -53,12 +53,20 @@
         </div>
     </nav>
 
-    <div class="container">
-
-        <div class="button-container">
-            <button type="button" class="btn btn-outline-success" id="flora-btn">Flora</button>
-            <button type="button" class="btn btn-outline-success" id="fauna-btn">Fauna</button>
+    <div class="sample-container-1">
+        <div class="image">
         </div>
+        <div class="text">
+            <h1>Flora</h1>
+            <p>Kekayaan flora merupakan harta karun alam yang tak ternilai harganya. Flora memberikan kehidupan,
+                keindahan, dan keseimbangan bagi ekosistem kita. Mereka bukan hanya elemen dekoratif di taman-taman,
+                tetapi juga memainkan peran krusial dalam menjaga kesehatan lingkungan. Memahami pentingnya pelestarian
+                flora, Taman Wanasutan Asri berdedikasi untuk melindungi dan merayakan keanekaragaman hayati yang ada di
+                dalamnya.</p>
+        </div>
+    </div>
+
+    <div class="container">
 
         <div class="flora-container">
 
@@ -84,7 +92,7 @@
 
             <div class="flora" data-name="flora">
                 <img src="picture/2.jpeg" alt="">
-                <h3>Pohon 1</h3>
+                <h3 id="text-fauna-name">Pohon 1</h3>
             </div>
 
             <div class="flora" data-name="flora">
@@ -94,11 +102,27 @@
 
         </div>
 
+    </div>
+
+    <div class="sample-container-2">
+        <div class="text">
+            <h1>Flora</h1>
+            <p>lorem ipsum dolor</p>
+        </div>
+        <div class="image">
+        </div>
+
+    </div>
+
+    <div class="container">
+
         <div class="fauna-container">
 
             <div class="fauna" data-name="fauna">
                 <img src="picture/cats.jpg" alt="">
-                <h3>Fauna 1</h3>
+                <div id="text-fauna-name" class="fauna-name">
+                    <h3>Fauna 1</h3>
+                </div>
             </div>
 
             <div class="fauna" data-name="fauna">
@@ -162,7 +186,7 @@
         </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
