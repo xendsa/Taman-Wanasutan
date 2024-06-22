@@ -261,18 +261,17 @@ body {
 .all-arsips .cols {
   margin-top: 5rem;
   display: grid;
+  place-items: center;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-  width: 90%;
   height: max-content;
 }
 
 .all-arsips .cols .col {
-  width: 100%;
+  width: 80%;
   height: max-content;
   display: flex;
-  border: 1px solid var(--light);
   flex-direction: column;
+  border: 1px solid var(--light);
   gap: 1rem;
   background: var(--light);
   padding: 2rem;
