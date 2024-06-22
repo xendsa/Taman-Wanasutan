@@ -70,12 +70,12 @@
 
         <div class="flora-container">
 
-            <div class="flora" data-name="flora">
+            <div class="flora" data-name="flora-1">
                 <img src="picture/1.jpg" alt="">
                 <h3>Pohon 1</h3>
             </div>
 
-            <div class="flora" data-name="flora">
+            <div class="flora" data-name="flora-2">
                 <img src="picture/2.jpeg" alt="">
                 <h3>Pohon 1</h3>
             </div>
@@ -183,6 +183,21 @@
         <div class="bottom">
             <a href="../../index.php">Taman Wanasutan</a>
             <a href="arsip.php#navbar" class="back-btn"><i class="ri-arrow-up-s-fill"></i></a>
+        </div>
+    </div>
+
+    <div class="item-preview">
+        <div class="preview" data-target="flora-1">
+            <i class="fas fa-times"></i>
+            <img src="picture/1.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+        </div>
+
+        <div class="preview" data-target="flora-2">
+            <i class="fas fa-times"></i>
+            <img src="picture/2.jpeg" alt="">
+            <h3>organic onions</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
         </div>
     </div>
 
