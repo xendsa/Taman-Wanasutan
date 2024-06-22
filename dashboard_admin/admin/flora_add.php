@@ -8,8 +8,9 @@ if(isset($_POST['nama'])){
     $habitat = $_POST['habitat'];
     $status_konservasi = $_POST['status_konservasi'];
 
-    $sql = "INSERT INTO flora (nama, deskripsi, jumlah, habitat, status_konservasi) VALUES ('$nama', '$deskripsi', '$jumlah', '$habitat', '$status_konservasi')";
-    if($conn->query($sql)){
+    $stmt = $conn->prepare("INSERT INTO flora (nama, deskripsi, jumlah, habitat, status_konservasi) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssiss", $nama, $deskripsi, $jumlah, $habitat, $status_konservasi);
+   if($stmt->execute()){
         $_SESSION['success'] = 'Flora added successfully';
     }
     else{
