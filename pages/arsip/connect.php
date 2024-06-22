@@ -32,4 +32,25 @@ function getArsip()
 
     return $data;
 }
+
+function randomData()
+{
+    global $conn;
+    $data = [];
+
+    // Query untuk mengambil data acak
+    $sql = "SELECT id_arsip, nama FROM arsip ORDER BY RAND() LIMIT 5";
+    $result = $conn->query($sql);
+
+    // Periksa apakah query berhasil dieksekusi dan ada hasil
+    if ($result && $result->num_rows > 0) {
+        // Ambil data dari hasil query
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+    }
+
+    return $data;
+}
+
 ?>

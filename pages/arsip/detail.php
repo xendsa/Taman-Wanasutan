@@ -1,4 +1,10 @@
 <?php
+require 'connect.php';
+
+getArsip();
+randomData();
+$arsipData = getArsip();
+$getRandom = randomData();
 
 
 $detail_id = '';
@@ -13,10 +19,8 @@ if (isset($_GET['id_arsip'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Arsip |
-        <?php echo $detail; ?>
-    </title>
-    <link rel="stylesheet" href="css-arsip.css">
+    <title>Detail Arsip | Taman Wanasutan Asri</title>
+    <link rel="stylesheet" href="css-detail.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap&amp;subset=latin-ext"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&amp;display=swap&amp;subset=latin-ext"
@@ -66,9 +70,13 @@ if (isset($_GET['id_arsip'])) {
     </nav>
 
     <!-- Section Container -->
-    <section class="detail-container">
-        <div class="cols">
-
+    <section class="top-detail">
+        <div class="nav-list">
+            <?php foreach ($getRandom as $item): ?>
+                <a href="detail.php?id_arsip='<?php echo htmlspecialchars($item['id_arsip']); ?>">
+                    <?php echo htmlspecialchars($item['nama']); ?>
+                </a>
+            <?php endforeach; ?>
         </div>
     </section>
 </body>
