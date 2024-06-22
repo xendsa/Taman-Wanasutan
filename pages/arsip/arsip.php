@@ -1,3 +1,10 @@
+<?php
+require 'connect.php';
+
+getArsip();
+$arsipData = getArsip();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -111,27 +118,18 @@
     <div class="arsip-kegiatan">
       <h2 class="titel-arsip">Arsip Kegiatan Taman</h2>
       <div class="cols">
-        <div class="col">
-          <img src="picture/h.jpg" alt="">
-          <div class="desc">
-            <h2>Nama Kegiatan</h2>
-            <a href="#">Lihat Detail</a>
+        <?php foreach ($arsipData as $arsip): ?>
+          <div class="col">
+            <a href="detail.php?id_arsip='<?php echo htmlspecialchars($arsip['id_arsip']); ?>'" class="img-link">
+              <img src="picture/h.jpg" alt="Kegiatan 1">
+            </a>
+            <h1 class="title-arsip">
+              <?php echo htmlspecialchars($arsip['nama']); ?>
+            </h1>
+            <a href="detail.php?id_arsip='<?php echo htmlspecialchars($arsip['id_arsip']); ?>'"
+              class="detail-access">Lihat Detail</a>
           </div>
-        </div>
-        <div class="col">
-          <img src="picture/i.jpg" alt="">
-          <div class="desc">
-            <h2>Nama Kegiatan</h2>
-            <a href="#">Lihat Detail</a>
-          </div>
-        </div>
-        <div class="col">
-          <img src="picture/j.jpg" alt="">
-          <div class="desc">
-            <h2>Nama Kegiatan</h2>
-            <a href="#">Lihat Detail</a>
-          </div>
-        </div>
+        <?php endforeach; ?>
       </div>
     </div>
   </div>

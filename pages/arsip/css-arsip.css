@@ -19,7 +19,7 @@
   --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
-  --light: #d7d7d7;
+  --light: #e4e4e4;
   --dark: #343a40;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
@@ -251,81 +251,68 @@ body {
 /* All Arsips Style Custom start */
 
 .all-arsips {
-  box-sizing: border-box;
-  position: relative;
   height: 100%;
-  top: 110%;
+  width: 100%;
+  margin-top: 50%;
   left: auto;
   padding: 1rem;
 }
 
 .all-arsips .cols {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 2rem;
-  width: 100%;
-  height: 25rem;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  width: 90%;
+  height: max-content;
 }
 
 .all-arsips .cols .col {
+  width: 100%;
+  height: max-content;
   display: flex;
+  border: 1px solid var(--light);
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem;
-  background: #fff;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 4px 4px 10px #57555563;
-  border: 1px solid var(--secondary);
+  gap: 1rem;
+  background: var(--light);
+  padding: 2rem;
   border-radius: 0.5rem;
-  width: auto;
-  height: 100%;
+  transition: 0.3s;
 }
 
-.all-arsips .cols .col img {
+.all-arsips .cols .col:hover {
+  transform: scale(1.01);
+  box-shadow: 5px 5px 15px #495057a0;
+}
+
+.all-arsips .cols .col .img-link img {
   border: 1.5px solid var(--dark);
-  border-radius: 20px;
-  width: 90%;
+  border-radius: 0.5rem;
+  width: 100%;
   height: auto;
 }
 
-.all-arsips .cols .col .desc {
-  display: flex;
-  gap: 2rem;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  padding: 0.7rem 1rem;
+.all-arsips .cols .col .title-arsip {
+  font-size: 1.3rem;
 }
 
-.all-arsips .cols .col .desc a:hover {
+.all-arsips .cols .col .detail-access {
+  display: flex;
+  background: var(--info);
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  border-radius: 0.3rem;
+  width: 50%;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.all-arsips .cols .col .detail-access:hover {
   background-color: transparent;
+  border: 1px solid #fff;
   color: var(--info);
   font-weight: 400;
-}
-
-.all-arsips .cols .col .desc a {
-  width: 30%;
-  font-weight: 600;
-  font-size: 1.1rem;
-  text-align: center;
-  border: 1px solid var(--info);
-  text-decoration: none;
-  border-radius: 10px;
-  color: #fff;
-  height: 100%;
-  padding: 0.5rem 0;
-  background-color: var(--info);
-}
-
-.all-arsips .cols .col .desc h2 {
-  margin: 0;
-  width: 50%;
-  text-align: center;
-  font-size: 1.2rem;
 }
 
 .all-arsips h2 {
@@ -336,19 +323,17 @@ body {
   margin-bottom: 2rem;
 }
 
-.all-arsips img {
-  width: 90%;
-}
-
 /* All Arsips Style Custom end */
 
 /* Footer Style Custom Start */
 
 .footer {
-  position: relative;
-  top: 100%;
-  bottom: 0;
   display: flex;
+  position: relative;
+  bottom: auto;
+  top: 100%;
+  left: 0;
+  right: 0;
   flex-direction: column;
   padding: 2rem;
   width: 100%;
