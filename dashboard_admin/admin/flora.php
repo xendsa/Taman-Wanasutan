@@ -95,7 +95,7 @@
 </div>
 <?php include 'includes/scripts.php'; ?>
 <script>
-$(function(){
+$(document).ready(function(){
   $('.edit').click(function(e){
     e.preventDefault();
     $('#edit').modal('show');
@@ -109,13 +109,6 @@ $(function(){
     var id = $(this).data('id');
     getRow(id);
   });
-
-  $('.photo').click(function(e){
-    e.preventDefault();
-    var id = $(this).data('id');
-    getRow(id);
-  });
-
 });
 
 function getRow(id){

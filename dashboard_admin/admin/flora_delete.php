@@ -4,8 +4,9 @@ include 'includes/session.php';
 if(isset($_POST['id_flora'])){
     $id_flora = $_POST['id_flora'];
     
-    $sql = "DELETE FROM flora WHERE id_flora = '$id_flora'";
-    if($conn->query($sql)){
+    $stmt = $conn->prepare("DELETE FROM flora WHERE id_flora = ?");
+    $stmt->bind_param("i", $id_flora);
+    if($stmt->execute()){
         $_SESSION['success'] = 'Flora deleted successfully';
     }
     else{
