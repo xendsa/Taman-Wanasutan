@@ -54,8 +54,7 @@
     </nav>
 
     <div class="sample-container-1">
-        <div class="image">
-        </div>
+        <img src="picture/1.jpg" alt="">
         <div class="text">
             <h1>Flora</h1>
             <p>Kekayaan flora merupakan harta karun alam yang tak ternilai harganya. Flora memberikan kehidupan,
@@ -107,10 +106,14 @@
     <div class="sample-container-2">
         <div class="text">
             <h1>Fauna</h1>
-            <p>lorem ipsum dolor</p>
+            <p>Kekayaan fauna adalah aset berharga yang memelihara keseimbangan alam dan mendukung kehidupan di bumi.
+                Menjaga dan memelihara segala jenis fauna bukan hanya tentang melindungi spesies individu, tetapi juga
+                tentang mempertahankan ekosistem yang sehat dan berkelanjutan bagi generasi mendatang. Fauna memainkan
+                peran penting dalam rantai makanan, penyebaran benih, dan menjaga kesehatan lingkungan. Oleh karena itu,
+                upaya konservasi dan perlindungan fauna harus menjadi prioritas bersama untuk memastikan kelestarian
+                alam kita.</p>
         </div>
-        <div class="image">
-        </div>
+        <img src="picture/cats.jpg" alt="">
 
     </div>
 
@@ -154,38 +157,6 @@
         </div>
     </div>
 
-    <div class="footer">
-        <div class="top">
-            <div class="footer-link">
-                <h2>Content</h2>
-                <div class="links">
-                    <a href="#dashboard">Halaman utama</a>
-                    <a href="#arsip-kegiatan">Arsip Kegiatan</a>
-                    <a href="#arsip-kompos">Arsip Kompos</a>
-                    <a href="#arsip-event">Arsip Event</a>
-                </div>
-            </div>
-            <div class="informations">
-                <h2>Informasi</h2>
-                <div class="links">
-                    <a href="#all-arsips">Informasi Umum</a>
-                </div>
-            </div>
-            <div class="sosial-media">
-                <h2>Sosial Media</h2>
-                <div class="links">
-                    <a href="#" id="instagram-btn"><i class="ri-instagram-fill"></i>
-                        Instagram</a>
-                    <a href="#" id="tiktok-btn"><i class="ri-tiktok-fill"></i> TikTok</a>
-                </div>
-            </div>
-        </div>
-        <div class="bottom">
-            <a href="../../index.php">Taman Wanasutan</a>
-            <a href="arsip.php#navbar" class="back-btn"><i class="ri-arrow-up-s-fill"></i></a>
-        </div>
-    </div>
-
     <div class="item-preview">
         <div class="preview" data-target="flora-1">
             <span>&times;</span>
@@ -222,6 +193,38 @@
             <img src="picture/2.jpeg" alt="">
             <h3>organic onions</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="top">
+            <div class="footer-link">
+                <h2>Content</h2>
+                <div class="links">
+                    <a href="#dashboard">Halaman utama</a>
+                    <a href="#arsip-kegiatan">Arsip Kegiatan</a>
+                    <a href="#arsip-kompos">Arsip Kompos</a>
+                    <a href="#arsip-event">Arsip Event</a>
+                </div>
+            </div>
+            <div class="informations">
+                <h2>Informasi</h2>
+                <div class="links">
+                    <a href="#all-arsips">Informasi Umum</a>
+                </div>
+            </div>
+            <div class="sosial-media">
+                <h2>Sosial Media</h2>
+                <div class="links">
+                    <a href="#" id="instagram-btn"><i class="ri-instagram-fill"></i>
+                        Instagram</a>
+                    <a href="#" id="tiktok-btn"><i class="ri-tiktok-fill"></i> TikTok</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="../../index.php">Taman Wanasutan</a>
+            <a href="arsip.php#navbar" class="back-btn"><i class="ri-arrow-up-s-fill"></i></a>
         </div>
     </div>
 
