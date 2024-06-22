@@ -120,14 +120,14 @@ $arsipData = getArsip();
       <div class="cols">
         <?php foreach ($arsipData as $arsip): ?>
           <div class="col">
-            <a href="detail.php?id_arsip='<?php echo htmlspecialchars($arsip['id_arsip']); ?>'" class="img-link">
-              <img src="picture/h.jpg" alt="Kegiatan 1">
+            <a href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>" class="img-link">
+              <img src="picture/i.jpg" alt="Kegiatan 1">
             </a>
             <h1 class="title-arsip">
               <?php echo htmlspecialchars($arsip['nama']); ?>
             </h1>
-            <a href="detail.php?id_arsip='<?php echo htmlspecialchars($arsip['id_arsip']); ?>'"
-              class="detail-access">Lihat Detail</a>
+            <a href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>" class="detail-access">Lihat
+              Detail</a>
           </div>
         <?php endforeach; ?>
       </div>

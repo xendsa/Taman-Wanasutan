@@ -11,6 +11,9 @@ $detail_id = '';
 if (isset($_GET['id_arsip'])) {
     $detail_id = $_GET['id_arsip'];
 }
+
+getDataById($detail_id);
+$dataById = getDataById($detail_id);
 ?>
 
 <!DOCTYPE html>
@@ -73,12 +76,41 @@ if (isset($_GET['id_arsip'])) {
     <section class="top-detail">
         <div class="nav-list">
             <?php foreach ($getRandom as $item): ?>
-                <a href="detail.php?id_arsip='<?php echo htmlspecialchars($item['id_arsip']); ?>">
+                <a class="img-link" href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>">
+                    <img src="picture/j.jpg" alt="1">
+                </a>
+                <a href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>" class="link-btn">
                     <?php echo htmlspecialchars($item['nama']); ?>
                 </a>
             <?php endforeach; ?>
         </div>
     </section>
+    <section class="container-detail">
+        <?php if ($dataById) { ?>
+            <div class="content">
+                <div class="desc">
+                    <h2>
+                        <?php echo htmlspecialchars($dataById['nama']); ?>
+                    </h2>
+                    <p>
+                        <?php echo $dataById['deskripsi']; ?>
+                    </p>
+                    <p>Tanggal :
+                        <?php echo $dataById['tanggal_ditambahkan']; ?>
+                    </p>
+                </div>
+                <img src="picture/i.jpg" alt="1">
+            <?php } ?>
+        </div>
+    </section>
+    <footer>
+        <a href="../../index,php" class="home-link">Taman Wanasutan</a>
+        <div class="link-list">
+            <a href="arsip.php">Semua Arsip</a>
+            <a href="../data-buku/databuku.php">Data Buku</a>
+            <a href="../flora-fauna/florafauna.php">Flora & Fauna</a>
+        </div>
+    </footer>
 </body>
 
 </html>
