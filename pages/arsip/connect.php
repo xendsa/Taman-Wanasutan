@@ -39,7 +39,7 @@ function randomData()
     $data = [];
 
     // Query untuk mengambil data acak
-    $sql = "SELECT id_arsip, nama FROM arsip ORDER BY RAND() LIMIT 5";
+    $sql = "SELECT id_arsip, nama FROM arsip ORDER BY RAND() LIMIT 3";
     $result = $conn->query($sql);
 
     // Periksa apakah query berhasil dieksekusi dan ada hasil
