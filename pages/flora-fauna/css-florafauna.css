@@ -324,7 +324,7 @@ body {
 }
 
 .item-preview .preview img {
-  max-width: 50%;
+  width: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
