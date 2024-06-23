@@ -341,12 +341,13 @@ body {
   }
 }
 
-.item-preview .preview h3 {
-  margin: 15px 0;
+.item-preview .preview .text-container {
+  margin-top: 10px;
 }
 
-.item-preview .preview p {
-  margin-bottom: 20px;
+.text-container h3,
+.text-container p {
+  margin: 10px 0;
 }
 /* item-preview end */
 

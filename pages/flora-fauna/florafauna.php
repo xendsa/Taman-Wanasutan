@@ -161,38 +161,53 @@
         <div class="preview" data-target="flora-1">
             <span id="close-btn">&times;</span>
             <img src="picture/1.jpg" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            <div class="text-container">
+                <h3>Title 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            </div>
         </div>
 
         <div class="preview" data-target="flora-2">
             <span id="close-btn">&times;</span>
             <img src="picture/2.jpeg" alt="">
-            <h3>organic onions</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            <div class="text-container">
+                <h3>Title 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            </div>
         </div>
         <div class="preview" data-target="flora-3">
             <span id="close-btn">&times;</span>
             <img src="picture/1.jpg" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            <div class="text-container">
+                <h3>Title 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            </div>
         </div>
 
         <div class="preview" data-target="flora-4">
             <span id="close-btn">&times;</span>
             <img src="picture/2.jpeg" alt="">
-            <h3>organic onions</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            <div class="text-container">
+                <h3>Title 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            </div>
         </div>
         <div class="preview" data-target="flora-5">
             <span id="close-btn">&times;</span>
             <img src="picture/1.jpg" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            <div class="text-container">
+                <h3>Title 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            </div>
         </div>
 
         <div class="preview" data-target="flora-6">
             <span id="close-btn">&times;</span>
             <img src="picture/2.jpeg" alt="">
-            <h3>organic onions</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            <div class="text-container">
+                <h3>Title 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            </div>
         </div>
     </div>
 
