@@ -78,8 +78,6 @@ $dataById = getDataById($detail_id);
             <?php foreach ($getRandom as $item): ?>
                 <a class="img-link" href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>">
                     <img src="picture/j.jpg" alt="1">
-                </a>
-                <a href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>" class="link-btn">
                     <?php echo htmlspecialchars($item['nama']); ?>
                 </a>
             <?php endforeach; ?>
@@ -103,14 +101,14 @@ $dataById = getDataById($detail_id);
             <?php } ?>
         </div>
     </section>
-    <footer>
-        <a href="../../index,php" class="home-link">Taman Wanasutan</a>
-        <div class="link-list">
-            <a href="arsip.php">Semua Arsip</a>
-            <a href="../data-buku/databuku.php">Data Buku</a>
-            <a href="../flora-fauna/florafauna.php">Flora & Fauna</a>
+    <div class="card text-center">
+        <div class="card-body">
+            <h5 class="card-title">Taman Wanasutan Asri</h5>
+            <p class="card-text">Alamat: Jl. Singosutan Barat, Sembego, Maguwoharjo, Kec. Depok, Kabupaten Sleman,
+                Daerah Istimewa Yogyakarta 55281</p>
+            <a href="arsip.php" class="btn btn-primary">Back</a>
         </div>
-    </footer>
+    </div>
 </body>
 
 </html>

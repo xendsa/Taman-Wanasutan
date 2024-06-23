@@ -1,47 +1,121 @@
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --bg: #eaeaea;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #e4e4e4;
+  --dark: #343a40;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body,
+p {
+  color: #787976;
+  font: 400 1rem / 1.5625rem "Open Sans", sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* Custom Navbar Styles */
+
 .navbar-brand {
-    margin-right: 50%;
+  margin-right: 20%;
+  margin-left: 5%;
+  width: 40.3%;
 }
 
 .navbar-nav .nav-item .nav-link {
-    margin-left: 25px; /* Adjust the margin as needed */
-    font-size: large;
+  margin-left: 25px;
+  font-size: large;
 }
 
 .navbar-nav .nav-item .nav-link i {
-    font-size: 1.2em; /* Adjust the icon size as needed */
+  font-size: 1.2em;
 }
 
-
-/* Custom Navbar Styles */
 .navbar {
-    background-color: rgba(248, 249, 250, 0.8);; /* Warna latar belakang navbar */
-    border-bottom: 1px solid #b1e994; /* Garis bawah navbar */
-    border-radius: 20px; /* Menghapus border-radius bawaan */
-    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.1); /* Efek bayangan navbar */
+  background-color: rgba(248, 249, 250, 0.8);
+  border-bottom: 1px solid #b1e994;
+  border-radius: 20px;
+  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  position: relative;
 }
 
 .navbar-brand {
-    font-weight: bold; /* Menambah ketebalan font untuk brand */
+  font-weight: bold;
 }
 
 .navbar-nav .nav-link {
-    color: #495057; /* Warna teks link */
+  color: #495057;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #007bff; /* Warna teks link saat dihover */
+  color: #007bff;
 }
 
 .navbar-toggler {
-    border: none; /* Menghapus border dari toggler */
+  border: none;
 }
 
 .navbar-toggler-icon {
-    color: #007bff; /* Warna ikon toggler */
+  color: #007bff;
 }
 
 .navbar-collapse {
-    border-top: 1px solid #dee2e6; /* Garis atas dropdown */
+  border-top: 1px solid #dee2e6;
+  transition: max-height 0.5s ease;
 }
 
+/* Image Slider */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: var(--dark);
+}
 
+body {
+  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--dark);
+  text-align: left;
+  background-color: #fff;
+}

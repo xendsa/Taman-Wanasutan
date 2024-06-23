@@ -63,3 +63,20 @@ body {
   background-color: #fff;
 }
 
+nav {
+  background-color: #24fff0b7;
+}
+
+.navbar-brand {
+  color: var(--dark);
+  font-weight: 600;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  width: 60%;
+}
+
+.container-fluid {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

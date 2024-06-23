@@ -51,7 +51,8 @@ html {
 
 .navbar-brand {
   margin-right: 50%;
-  width: 63.1%;
+  margin-left: 5%;
+  width: 60%;
 }
 
 .navbar-nav .nav-item .nav-link {
