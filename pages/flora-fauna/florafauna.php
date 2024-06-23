@@ -70,32 +70,32 @@
         <div class="flora-container">
 
             <div class="flora" data-name="flora-1">
-                <img src="picture/1.jpg" alt="">
+                <img class="img-flora" src="picture/1.jpg" alt="">
                 <h3>Pohon 1</h3>
             </div>
 
             <div class="flora" data-name="flora-2">
-                <img src="picture/2.jpeg" alt="">
+                <img class="img-flora" src="picture/2.jpeg" alt="">
                 <h3>Pohon 1</h3>
             </div>
 
             <div class="flora" data-name="flora-3">
-                <img src="picture/1.jpg" alt="">
+                <img class="img-flora" src="picture/1.jpg" alt="">
                 <h3>Pohon 1</h3>
             </div>
 
             <div class="flora" data-name="flora-4">
-                <img src="picture/1.jpg" alt="">
+                <img class="img-flora" src="picture/1.jpg" alt="">
                 <h3>Pohon 1</h3>
             </div>
 
             <div class="flora" data-name="flora-5">
-                <img src="picture/2.jpeg" alt="">
+                <img class="img-flora" src="picture/2.jpeg" alt="">
                 <h3 id="text-fauna-name">Pohon 1</h3>
             </div>
 
             <div class="flora" data-name="flora-6">
-                <img src="picture/1.jpg" alt="">
+                <img class="img-flora" src="picture/1.jpg" alt="">
                 <h3>Pohon 1</h3>
             </div>
 
@@ -159,37 +159,37 @@
 
     <div class="item-preview">
         <div class="preview" data-target="flora-1">
-            <span>&times;</span>
+            <span id="close-btn">&times;</span>
             <img src="picture/1.jpg" alt="">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
         </div>
 
         <div class="preview" data-target="flora-2">
-            <span>&times;</span>
+            <span id="close-btn">&times;</span>
             <img src="picture/2.jpeg" alt="">
             <h3>organic onions</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
         </div>
         <div class="preview" data-target="flora-3">
-            <span>&times;</span>
+            <span id="close-btn">&times;</span>
             <img src="picture/1.jpg" alt="">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
         </div>
 
         <div class="preview" data-target="flora-4">
-            <span>&times;</span>
+            <span id="close-btn">&times;</span>
             <img src="picture/2.jpeg" alt="">
             <h3>organic onions</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
         </div>
         <div class="preview" data-target="flora-5">
-            <span>&times;</span>
+            <span id="close-btn">&times;</span>
             <img src="picture/1.jpg" alt="">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
         </div>
 
         <div class="preview" data-target="flora-6">
-            <span>&times;</span>
+            <span id="close-btn">&times;</span>
             <img src="picture/2.jpeg" alt="">
             <h3>organic onions</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
