@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2024 at 05:01 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.0.13
+-- Generation Time: Jun 22, 2024 at 05:09 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,7 +33,7 @@ CREATE TABLE `admin` (
   `password` varchar(60) NOT NULL,
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
-  `photo` varchar(200) NOT NULL,
+  `photo` longblob NOT NULL,
   `created_on` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -42,7 +42,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `firstname`, `lastname`, `photo`, `created_on`) VALUES
-(1, 'admin', 'admin123', 'admin', 'wanasutan', 'desktop.jpg', '2024-06-14');
+(1, 'Admin', 'admin123', 'Admin Taman', 'Wanasutan Asri', 0x6465736b746f702e6a7067, '2018-04-30');
 
 -- --------------------------------------------------------
 
@@ -89,7 +89,8 @@ CREATE TABLE `buku` (
   `penerbit` varchar(255) DEFAULT NULL,
   `tahun_terbit` year(4) DEFAULT NULL,
   `genre` varchar(100) DEFAULT NULL,
-  `deskripsi` text DEFAULT NULL
+  `deskripsi` text DEFAULT NULL,
+  `gambar` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -105,6 +106,7 @@ CREATE TABLE `fauna` (
   `jumlah` int(20) DEFAULT NULL,
   `habitat` varchar(255) DEFAULT NULL,
   `status_konservasi` varchar(50) DEFAULT NULL
+    `gambar` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -127,11 +129,12 @@ CREATE TABLE `flora` (
 --
 
 INSERT INTO `flora` (`id_flora`, `nama`, `deskripsi`, `jumlah`, `habitat`, `status_konservasi`) VALUES
-(1, 'Rafflesia arnoldii', 'Largest individual flower on earth', 10, 'Rainforest', 'Endangered'),
-(2, 'Nepenthes rajah', 'Carnivorous plant', 5, 'Mountains', 'Vulnerable'),
-(3, 'Titan arum', 'Has the largest unbranched inflorescence in the world', 3, 'Tropical forests', 'Threatened'),
-(4, 'Baobab', 'Adansonia tree, known for its massive trunk', 20, 'Savanna', 'Least Concern'),
-(5, 'Welwitschia', 'Very unusual, long-lived plant', 7, 'Deserts', 'Near Threatened');
+(1, 'Rafflesia arnoldii', 'Bunga terbesar di dunia, ditemukan di hutan hujan Indonesia.', 5, 'Hutan hujan tropis', 'Terancam punah'),
+(2, 'Nepenthes', 'Tumbuhan kantong semar yang terkenal dengan mekanisme perangkapnya untuk menangkap serangga.', 20, 'Rawa dan pegunungan', 'Rentan'),
+(3, 'Amorphophallus titanum', 'Dikenal sebagai bunga bangkai, memiliki bunga majemuk terbesar di dunia.', 3, 'Hutan tropis', 'Terancam punah'),
+(4, 'Edelweiss', 'Bunga abadi yang tumbuh di pegunungan tinggi, sering ditemukan di Indonesia.', 15, 'Pegunungan', 'Rentan'),
+(5, 'Ficus benjamina', 'Pohon beringin yang sering dijadikan tanaman hias.', 50, 'Hutan tropis', 'Tidak terancam'),
+(6, 'Cek', 'swdfsf', 12, 'huahduad', 'Hidup');
 
 -- --------------------------------------------------------
 
@@ -216,7 +219,7 @@ ALTER TABLE `fauna`
 -- AUTO_INCREMENT for table `flora`
 --
 ALTER TABLE `flora`
-  MODIFY `id_flora` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_flora` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
