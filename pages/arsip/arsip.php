@@ -76,52 +76,55 @@ $arsipData = getArsip();
     </div>
     <div class="arsip-kegiatan">
       <h2 class="titel-arsip">Arsip Kegiatan Taman</h2>
-    </div>
-    <div class="cols" id="colsDiv">
-      <?php foreach ($arsipData as $arsip): ?>
-        <div class="col">
-          <a href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>" class="img-link">
-            <img src="picture/i.jpg" alt="Kegiatan 1">
-          </a>
-          <h1 class="title-arsip">
-            <?php echo htmlspecialchars($arsip['nama']); ?>
-          </h1>
-          <a href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>" class="detail-access">Lihat
-            Detail</a>
-        </div>
-      <?php endforeach; ?>
-    </div>
-    <div class="cols-search" id='cols-search'>
-      <?php
-      $dataFound = 'false';
-      if (isset($_GET['cari'])) {
-        $keyword = $_GET['nama_kegiatan']; // get nama kegiatan
-        $sql = "SELECT * FROM arsip WHERE nama = '$keyword'";  // get arsip data
-        $result = $conn->query($sql);
-        if ($result->num_rows > 0) {
-          $dataFound = 'true'; // Data found
-          while ($row = $result->fetch_assoc()) { ?>
-            <div class="col">
-              <a href="detail.php?id_arsip=<?php echo urlencode($row['id_arsip']); ?>" class="img-link">
-                <img src="picture/i.jpg" alt="Kegiatan 1">
-              </a>
-              <div class="desc">
-                <h1 class="title-arsip">
-                  <?php echo htmlspecialchars($row['nama']); ?>
-                </h1>
-                <a href="detail.php?id_arsip=<?php echo urlencode($row['id_arsip']); ?>" class="detail-access">Lihat
-                  Detail</a>
+      <div class="cols" id="colsDiv">
+        <?php foreach ($arsipData as $arsip): ?>
+          <div class="col">
+            <a href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>" class="img-link">
+              <img src="picture/i.jpg" alt="Kegiatan 1">
+            </a>
+            <h1 class="title-arsip">
+              <?php echo htmlspecialchars($arsip['nama']); ?>
+            </h1>
+            <a href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>" class="detail-access">Lihat
+              Detail</a>
+          </div>
+        <?php endforeach; ?>
+      </div>
+      <div class="cols-search" id='cols-search'>
+        <?php
+        $dataFound = 'false';
+        if (isset($_GET['cari'])) {
+          $keyword = $_GET['nama_kegiatan']; // get nama kegiatan
+          $sql = "SELECT * FROM arsip WHERE nama = '$keyword'";  // get arsip data
+          $result = $conn->query($sql);
+          if ($result->num_rows > 0) {
+            $dataFound = 'true'; // Data found
+            while ($row = $result->fetch_assoc()) { ?>
+              <div class="col">
+                <a href="detail.php?id_arsip=<?php echo urlencode($row['id_arsip']); ?>" class="img-link">
+                  <img src="picture/i.jpg" alt="Kegiatan 1">
+                </a>
+                <div class="desc">
+                  <h1 class="title-arsip">
+                    <?php echo htmlspecialchars($row['nama']); ?>
+                  </h1>
+                  <a href="detail.php?id_arsip=<?php echo urlencode($row['id_arsip']); ?>" class="detail-access">Lihat
+                    Detail</a>
+                </div>
               </div>
-            </div>
-            <button class="btn btn-primary" id="seeAll">Lihat Semua</button>
-          <?php }
-        } else {
-          echo "<p>No results found for '$keyword'</p>";
+              <button class="btn btn-primary" id="seeAll">Lihat Semua</button>
+            <?php }
+          } else {
+            echo "<p>No results found for '$keyword'</p>";
+          }
         }
-      }
-      ?>
+        ?>
+      </div>
     </div>
   </div>
+
+  <div class="arsip-buku">
+    
   </div>
 
   <footer class="footer">

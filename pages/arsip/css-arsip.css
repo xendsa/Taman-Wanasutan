@@ -264,6 +264,7 @@ body {
 .all-arsips .arsip-kegiatan {
   height: 10%;
   width: 100%;
+  margin-top: 5%;
 }
 
 .all-arsips .text-search {
@@ -532,6 +533,46 @@ body {
 
 /* Footer Style Custom end */
 
+@media (max-width: 768px) {
+  .all-arsips {
+    width: 100%;
+    height: max-content;
+  }
+
+  .all-arsips .text-search {
+    width: 100%;
+  }
+
+  .all-arsips .text-search .form-search-kegiatan {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+  }
+
+  .all-arsips .text-search .form-search-kegiatan form {
+    width: 100%;
+  }
+
+  .form-search-kegiatan form input[type="text"] {
+    width: 65%;
+  }
+
+  .form-search-kegiatan form .button-search {
+    width: 15%;
+  }
+
+  .all-arsips .text-search p {
+    width: 80%;
+  }
+
+  .all-arsips .arsip-kegiatan .cols,
+  .all-arsips .arsip-kegiatan .cols-search {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 576px) {
   .navbar-nav .nav-item .nav-link {
     margin-left: 0;
@@ -561,29 +602,46 @@ body {
 
   .all-arsips {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .arsip-kegiatan {
+  .all-arsips .arsip-kegiatan {
     width: 100%;
+    margin-top: 10%;
+  }
+
+  .all-arsips .arsip-kegiatan .titel-arsip {
+    margin-bottom: 0;
+  }
+
+  .all-arsips .arsip-kegiatan .cols,
+  .all-arsips .arsip-kegiatan .cols-search {
+    margin-top: 5%;
   }
 
   .form-search-kegiatan {
     width: 100%;
   }
 
-  .text-search {
-    width: 100%;
+  .all-arsips .text-search {
+    width: 90%;
   }
 
   .form-search-kegiatan form {
     width: 100%;
   }
 
-  .form-search-kegiatan form input {
-    width: 80%;
+  .form-search-kegiatan form input[type="text"] {
+    width: 70%;
   }
 
-  .all-arsips .arsip-kegiatan .text-search p {
+  .form-search-kegiatan form .button-search {
+    width: 20%;
+  }
+
+  .all-arsips .text-search p {
     width: 90%;
   }
 
