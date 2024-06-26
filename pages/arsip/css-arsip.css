@@ -43,7 +43,7 @@ p {
 
 body,
 html {
-  height: 100%;
+  height: max-content;
   width: 100%;
 }
 
@@ -254,15 +254,90 @@ body {
 .all-arsips {
   height: 100%;
   width: 100%;
-  margin-top: 55%;
   left: auto;
   padding: 1rem;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .all-arsips .arsip-kegiatan {
   height: 10%;
+  width: 100%;
+}
+
+.all-arsips .text-search {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: rgba(176, 176, 176, 0.704);
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.all-arsips .text-search .form-search-kegiatan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.form-search-kegiatan h1 {
+  display: flex;
+  font-size: 1.5em;
+  text-align: start;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.form-search-kegiatan form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  color: var(--gray-dark);
+}
+
+.form-search-kegiatan input {
+  width: 30%;
+  padding: 0.3rem;
+  margin: 0;
+}
+
+.form-search-kegiatan input[type="text"] {
+  border-radius: 10px 0 0 10px;
+  border: #1f1f1f solid 1px;
+}
+
+.form-search-kegiatan .button-search {
+  width: 10%;
+  margin-top: 0;
+  margin: 0;
+  background: var(--green);
+  border: 1px solid #003900;
+  border-radius: 0 10px 10px 0;
+  color: var(--white);
+  transition: 0.1s;
+}
+
+.form-search-kegiatan .button-search:hover {
+  background: rgb(124, 255, 124);
+  color: #0e0e0e;
+}
+
+.form-search-kegiatan h1 {
+  text-align: center;
+}
+
+.all-arsips .text-search p {
+  width: 50%;
+  text-align: center;
+  color: #000;
 }
 
 .all-arsips .arsip-kegiatan h2 {
@@ -273,7 +348,8 @@ body {
   justify-content: center;
 }
 
-.all-arsips .cols {
+.all-arsips .cols,
+.cols-search {
   margin-top: 5rem;
   display: grid;
   place-items: center;
@@ -282,7 +358,8 @@ body {
   height: max-content;
 }
 
-.all-arsips .cols .col {
+.all-arsips .cols .col,
+.cols-search .col {
   width: 75%;
   height: max-content;
   display: flex;
@@ -292,26 +369,30 @@ body {
   background: var(--light);
   padding: 2rem;
   border-radius: 0.5rem;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 
-.all-arsips .cols .col:hover {
+.all-arsips .cols .col:hover,
+.cols-search .col:hover {
   transform: scale(1.01);
   box-shadow: 5px 5px 15px #495057a0;
 }
 
-.all-arsips .cols .col .img-link img {
+.all-arsips .cols .col .img-link img,
+.all-arsips .cols-search .col .img-link img {
   border: 1.5px solid var(--dark);
   border-radius: 0.5rem;
   width: 100%;
   height: auto;
 }
 
-.all-arsips .cols .col .title-arsip {
+.all-arsips .cols .col .title-arsip,
+.cols-search .col .title-arsip {
   font-size: 1.3rem;
 }
 
-.all-arsips .cols .col .detail-access {
+.all-arsips .cols .col .detail-access,
+.all-arsips .cols-search .col .detail-access {
   display: flex;
   background: var(--info);
   padding: 0.5rem 1rem;
@@ -345,8 +426,8 @@ body {
 .footer {
   display: flex;
   position: relative;
-  bottom: auto;
-  top: 100%;
+  bottom: 0;
+  top: 200%;
   left: 0;
   right: 0;
   flex-direction: column;
@@ -450,3 +531,64 @@ body {
 }
 
 /* Footer Style Custom end */
+
+@media (max-width: 576px) {
+  .navbar-nav .nav-item .nav-link {
+    margin-left: 0;
+    font-size: medium;
+  }
+
+  .navbar-brand {
+    margin-right: 0;
+    margin-left: 0;
+    width: auto;
+  }
+
+  .container {
+    width: 100%;
+    height: auto;
+    top: 20%;
+    left: 50%;
+    width: 10%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .container .slide {
+    width: 20%;
+    height: 40%;
+  }
+
+  .all-arsips {
+    width: 100%;
+  }
+
+  .arsip-kegiatan {
+    width: 100%;
+  }
+
+  .form-search-kegiatan {
+    width: 100%;
+  }
+
+  .text-search {
+    width: 100%;
+  }
+
+  .form-search-kegiatan form {
+    width: 100%;
+  }
+
+  .form-search-kegiatan form input {
+    width: 80%;
+  }
+
+  .all-arsips .arsip-kegiatan .text-search p {
+    width: 90%;
+  }
+
+  .all-arsips .cols,
+  .cols-search {
+    grid-template-columns: 1fr;
+  }
+}

@@ -60,81 +60,71 @@ $arsipData = getArsip();
     </div>
   </nav>
 
-  <div class="container" id="dashboard">
-    <div class="slide">
-      <div class="item" style="background-image: url(picture/1.png);">
-        <div class="content">
-          <div class="name">Switzerland</div>
-          <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-          <button>Lihat Detail</button>
-        </div>
-      </div>
-      <div class="item" style="background-image: url(picture/2.png);">
-        <div class="content">
-          <div class="name">Finland</div>
-          <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-          <button>See More</button>
-        </div>
-      </div>
-      <div class="item" style="background-image: url(picture/3.png);">
-        <div class="content">
-          <div class="name">Iceland</div>
-          <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-          <button>Lihat Detail</button>
-        </div>
-      </div>
-      <div class="item" style="background-image: url(picture/1.png);">
-        <div class="content">
-          <div class="name">Australia</div>
-          <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-          <button>Lihat Detail</button>
-        </div>
-      </div>
-      <div class="item" style="background-image: url(picture/2.png);">
-        <div class="content">
-          <div class="name">Netherland</div>
-          <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-          <button>Lihat Detail</button>
-        </div>
-      </div>
-      <div class="item" style="background-image: url(picture/3.png);">
-        <div class="content">
-          <div class="name">Ireland</div>
-          <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-          <button>Lihat Detail</button>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="button">
-      <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
-      <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
-    </div>
-
-  </div>
-
   <div class="all-arsips" id="all-arsips">
+    <div class="text-search">
+      <div class="form-search-kegiatan" id="search-div">
+        <h1 class="text-title">Cari Kegiatan</h1>
+        <form action="arsip.php#cols-search" method="get">
+          <input type="text" name="nama_kegiatan" placeholder="Cari Kegiatan..">
+          <input class="button-search" name="cari" type="submit" value="Cari">
+        </form>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex repellat inventore, perspiciatis explicabo
+        reprehenderit, iusto maiores dolor id, recusandae suscipit soluta quia a. Culpa facilis sapiente nihil eaque
+        suscipit id iure dignissimos inventore dolorem nesciunt. Eveniet iure aliquam nobis repellendus cum doloremque
+        hic. Nemo nostrum unde dolor a sint! Reprehenderit.</p>
+    </div>
     <div class="arsip-kegiatan">
       <h2 class="titel-arsip">Arsip Kegiatan Taman</h2>
-      <div class="cols">
-        <?php foreach ($arsipData as $arsip): ?>
-          <div class="col">
-            <a href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>" class="img-link">
-              <img src="picture/i.jpg" alt="Kegiatan 1">
-            </a>
-            <h1 class="title-arsip">
-              <?php echo htmlspecialchars($arsip['nama']); ?>
-            </h1>
-            <a href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>" class="detail-access">Lihat
-              Detail</a>
-          </div>
-        <?php endforeach; ?>
-      </div>
+    </div>
+    <div class="cols" id="colsDiv">
+      <?php foreach ($arsipData as $arsip): ?>
+        <div class="col">
+          <a href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>" class="img-link">
+            <img src="picture/i.jpg" alt="Kegiatan 1">
+          </a>
+          <h1 class="title-arsip">
+            <?php echo htmlspecialchars($arsip['nama']); ?>
+          </h1>
+          <a href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>" class="detail-access">Lihat
+            Detail</a>
+        </div>
+      <?php endforeach; ?>
+    </div>
+    <div class="cols-search" id='cols-search'>
+      <?php
+      $dataFound = 'false';
+      if (isset($_GET['cari'])) {
+        $keyword = $_GET['nama_kegiatan']; // get nama kegiatan
+        $sql = "SELECT * FROM arsip WHERE nama = '$keyword'";  // get arsip data
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+          $dataFound = 'true'; // Data found
+          while ($row = $result->fetch_assoc()) { ?>
+            <div class="col">
+              <a href="detail.php?id_arsip=<?php echo urlencode($row['id_arsip']); ?>" class="img-link">
+                <img src="picture/i.jpg" alt="Kegiatan 1">
+              </a>
+              <div class="desc">
+                <h1 class="title-arsip">
+                  <?php echo htmlspecialchars($row['nama']); ?>
+                </h1>
+                <a href="detail.php?id_arsip=<?php echo urlencode($row['id_arsip']); ?>" class="detail-access">Lihat
+                  Detail</a>
+              </div>
+            </div>
+            <button class="btn btn-primary" id="seeAll">Lihat Semua</button>
+          <?php }
+        } else {
+          echo "<p>No results found for '$keyword'</p>";
+        }
+      }
+      ?>
     </div>
   </div>
+  </div>
 
-  <div class="footer">
+  <footer class="footer">
     <div class="top">
       <div class="footer-link">
         <h2>Content</h2>
@@ -164,9 +154,24 @@ $arsipData = getArsip();
       <a href="../../index.php">Taman Wanasutan</a>
       <a href="arsip.php#navbar" class="back-btn"><i class="ri-arrow-up-s-fill"></i></a>
     </div>
-  </div>
+  </footer>
 
   <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const colsDiv = document.getElementById('colsDiv');
+      const dataFound = <?php echo json_encode($dataFound); ?>;
+
+      if (dataFound) {
+        colsDiv.style.display = 'none';
+      }
+    })
+
+    document.getElementById('seeAll').addEventListener('click', () => {
+      document.querySelector('.cols-search').style.display = 'none';
+      document.getElementById('colsDiv').style.display = 'grid';
+    });
+  </script>
 </body>
 
 </html>

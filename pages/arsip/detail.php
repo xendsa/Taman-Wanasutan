@@ -72,38 +72,40 @@ $dataById = getDataById($detail_id);
         </div>
     </nav>
 
+    <section class="break">
+        <h3>Detail Arsip</h3>
+    </section>
     <!-- Section Container -->
-    <section class="top-detail">
-        <div class="nav-list">
-            <?php foreach ($getRandom as $item): ?>
-                <a class="img-link" href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>">
-                    <img src="picture/j.jpg" alt="1">
-                    <?php echo htmlspecialchars($item['nama']); ?>
-                </a>
-            <?php endforeach; ?>
-        </div>
-    </section>
-    <section class="container-detail">
-        <?php if ($dataById) { ?>
-            <div class="content">
+    <div class="container">
+        <img src="picture/h.jpg" alt="1" class="img-fluid">
+        <?php
+        $query = "SELECT * FROM arsip WHERE id_arsip = '$detail_id'";
+        $result = $conn->query($query);
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) { ?>
                 <div class="desc">
-                    <h2>
-                        <?php echo htmlspecialchars($dataById['nama']); ?>
-                    </h2>
+                    <h1>
+                        <?php echo htmlspecialchars($row['nama']); ?>
+                    </h1>
                     <p>
-                        <?php echo $dataById['deskripsi']; ?>
+                        <?php echo htmlspecialchars($row['deskripsi']); ?>
                     </p>
-                    <p>Tanggal :
-                        <?php echo $dataById['tanggal_ditambahkan']; ?>
-                    </p>
+                    <h3>
+                        <?php echo "Kategori : " . htmlspecialchars($row['jenis_arsip']); ?>
+                    </h3>
                 </div>
-                <img src="picture/i.jpg" alt="1">
-            <?php } ?>
+            <?php }
+        }
+        ?>
+        <div class="btn">
+            <button id="backBtn" type="button" class="btn btn-outline-secondary">Back</button>
+            <button id="nextBtn" type="button" class="btn btn-outline-secondary">Next</button>
         </div>
-    </section>
-    <div class="card text-center">
+    </div>
+
+    <div class="card footer text-center">
         <div class="card-body">
-            <h5 class="card-title">Taman Wanasutan Asri</h5>
+            <h4 class="card-title title">Taman Wanasutan Asri</h4>
             <p class="card-text">Alamat: Jl. Singosutan Barat, Sembego, Maguwoharjo, Kec. Depok, Kabupaten Sleman,
                 Daerah Istimewa Yogyakarta 55281</p>
             <a href="arsip.php" class="btn btn-primary">Back</a>
