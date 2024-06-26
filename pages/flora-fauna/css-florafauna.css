@@ -313,6 +313,10 @@ body {
   align-items: center;
 }
 
+.item-preview .preview.active{
+  display: inline-block;
+}
+
 .item-preview .preview span {
   position: absolute;
   top: 0;
