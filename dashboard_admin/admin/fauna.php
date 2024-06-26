@@ -23,27 +23,27 @@
             <!-- Main content -->
             <section class="content">
                 <?php
-        if(isset($_SESSION['error'])){
-          echo "
-            <div class='alert alert-danger alert-dismissible'>
-              <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
-              <h4><i class='icon fa fa-warning'></i> Error!</h4>
-              ".$_SESSION['error']."
-            </div>
-          ";
-          unset($_SESSION['error']);
-        }
-        if(isset($_SESSION['success'])){
-          echo "
-            <div class='alert alert-success alert-dismissible'>
-              <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
-              <h4><i class='icon fa fa-check'></i> Success!</h4>
-              ".$_SESSION['success']."
-            </div>
-          ";
-          unset($_SESSION['success']);
-        }
-      ?>
+                if(isset($_SESSION['error'])){
+                    echo "
+                        <div class='alert alert-danger alert-dismissible'>
+                            <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+                            <h4><i class='icon fa fa-warning'></i> Error!</h4>
+                            ".$_SESSION['error']."
+                        </div>
+                    ";
+                    unset($_SESSION['error']);
+                }
+                if(isset($_SESSION['success'])){
+                    echo "
+                        <div class='alert alert-success alert-dismissible'>
+                            <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+                            <h4><i class='icon fa fa-check'></i> Success!</h4>
+                            ".$_SESSION['success']."
+                        </div>
+                    ";
+                    unset($_SESSION['success']);
+                }
+                ?>
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="box">
@@ -65,10 +65,10 @@
                                     </thead>
                                     <tbody>
                                         <?php
-                    $sql = "SELECT * FROM fauna";
-                    $query = $conn->query($sql);
-                    while($row = $query->fetch_assoc()){
-                      ?>
+                                        $sql = "SELECT * FROM fauna";
+                                        $query = $conn->query($sql);
+                                        while($row = $query->fetch_assoc()){
+                                            ?>
                                         <tr>
                                             <td><?php echo $row['id_fauna']; ?></td>
                                             <td><?php echo $row['nama']; ?></td>
@@ -77,8 +77,11 @@
                                             <td><?php echo $row['habitat']; ?></td>
                                             <td><?php echo $row['status_konservasi']; ?></td>
                                             <td>
-                                                <img src="../images/<?php echo $row['gambar']; ?>" height="30px"
-                                                    width="30px">
+                                                <?php
+                                                    if(!empty($row['gambar'])){
+                                                        echo "<img src='images/".$row['gambar']."' width='50px' height='50px'>";
+                                                    }
+                                                    ?>
                                             </td>
                                             <td>
                                                 <button class="btn btn-success btn-sm edit btn-flat"
@@ -90,8 +93,8 @@
                                             </td>
                                         </tr>
                                         <?php
-                    }
-                  ?>
+                                        }
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -102,7 +105,7 @@
         </div>
 
         <?php include 'includes/footer.php'; ?>
-        <?php include 'fauna_modal.php'; ?>
+        <?php include 'Fauna/fauna_modal.php'; ?>
     </div>
     <?php include 'includes/scripts.php'; ?>
     <script>
@@ -125,7 +128,7 @@
     function getRow(id) {
         $.ajax({
             type: 'POST',
-            url: 'fauna_row.php',
+            url: 'Fauna/fauna_row.php',
             data: {
                 id: id
             },
@@ -140,7 +143,7 @@
                 $('#edit_jumlah').val(response.jumlah);
                 $('#edit_habitat').val(response.habitat);
                 $('#edit_status_konservasi').val(response.status_konservasi);
-                $('#edit_gambar').val(response.gambar);
+                $('#current_gambar').attr('src', 'images/' + response.gambar);
             }
         });
     }

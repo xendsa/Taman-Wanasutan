@@ -55,7 +55,8 @@ CREATE TABLE `arsip` (
   `nama` varchar(255) NOT NULL,
   `deskripsi` text DEFAULT NULL,
   `tanggal_ditambahkan` date DEFAULT NULL,
-  `jenis_arsip` varchar(255) DEFAULT NULL
+  `jenis_arsip` varchar(255) DEFAULT NULL,
+  `gambar` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------

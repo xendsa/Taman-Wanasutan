@@ -1,5 +1,5 @@
 <?php
-include 'includes/session.php';
+include '../includes/session.php';
 
 if(isset($_POST['nama'])){
     $nama = $_POST['nama'];
@@ -26,5 +26,5 @@ else{
     $_SESSION['error'] = 'Fill up add form first';
 }
 
-header('location: /fauna.php');
+header('location: ../fauna.php');
 ?>

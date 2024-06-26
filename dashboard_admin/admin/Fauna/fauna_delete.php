@@ -1,5 +1,5 @@
 <?php
-include 'includes/session.php';
+include '../includes/session.php';
 
 if(isset($_POST['id_fauna'])){
     $id_fauna = $_POST['id_fauna'];
@@ -17,5 +17,5 @@ else{
     $_SESSION['error'] = 'Select fauna to delete first';
 }
 
-header('location: fauna.php');
+header('location: ../fauna.php');
 ?>
