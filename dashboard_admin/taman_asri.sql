@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 22, 2024 at 05:09 PM
+-- Generation Time: Jun 27, 2024 at 04:56 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -59,6 +59,13 @@ CREATE TABLE `arsip` (
   `gambar` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `arsip`
+--
+
+INSERT INTO `arsip` (`id_arsip`, `nama`, `deskripsi`, `tanggal_ditambahkan`, `jenis_arsip`, `gambar`) VALUES
+(3, 'cdcd', 'dcdcd', '2024-06-14', 'cuucs', 'Basantara_VB.png');
+
 -- --------------------------------------------------------
 
 --
@@ -94,6 +101,13 @@ CREATE TABLE `buku` (
   `gambar` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `buku`
+--
+
+INSERT INTO `buku` (`id_buku`, `judul`, `penulis`, `penerbit`, `tahun_terbit`, `genre`, `deskripsi`, `gambar`) VALUES
+(2, 'fdfd', 'dee', 'erer', 0000, 'rere', 'fefefefe', '40023930841_656eda8fc1_o.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -106,9 +120,16 @@ CREATE TABLE `fauna` (
   `deskripsi` text DEFAULT NULL,
   `jumlah` int(20) DEFAULT NULL,
   `habitat` varchar(255) DEFAULT NULL,
-  `status_konservasi` varchar(50) DEFAULT NULL
-    `gambar` varchar(255) DEFAULT NULL
+  `status_konservasi` varchar(50) DEFAULT NULL,
+  `gambar` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `fauna`
+--
+
+INSERT INTO `fauna` (`id_fauna`, `nama`, `deskripsi`, `jumlah`, `habitat`, `status_konservasi`, `gambar`) VALUES
+(2, 'Kucing', 'Kucing yang imut', 12, 'Hidup', 'Langka', '45222213351_db57ae5c86_o.jpg');
 
 -- --------------------------------------------------------
 
@@ -122,20 +143,21 @@ CREATE TABLE `flora` (
   `deskripsi` text DEFAULT NULL,
   `jumlah` int(20) DEFAULT NULL,
   `habitat` varchar(255) DEFAULT NULL,
-  `status_konservasi` varchar(50) DEFAULT NULL
+  `status_konservasi` varchar(50) DEFAULT NULL,
+  `gambar` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `flora`
 --
 
-INSERT INTO `flora` (`id_flora`, `nama`, `deskripsi`, `jumlah`, `habitat`, `status_konservasi`) VALUES
-(1, 'Rafflesia arnoldii', 'Bunga terbesar di dunia, ditemukan di hutan hujan Indonesia.', 5, 'Hutan hujan tropis', 'Terancam punah'),
-(2, 'Nepenthes', 'Tumbuhan kantong semar yang terkenal dengan mekanisme perangkapnya untuk menangkap serangga.', 20, 'Rawa dan pegunungan', 'Rentan'),
-(3, 'Amorphophallus titanum', 'Dikenal sebagai bunga bangkai, memiliki bunga majemuk terbesar di dunia.', 3, 'Hutan tropis', 'Terancam punah'),
-(4, 'Edelweiss', 'Bunga abadi yang tumbuh di pegunungan tinggi, sering ditemukan di Indonesia.', 15, 'Pegunungan', 'Rentan'),
-(5, 'Ficus benjamina', 'Pohon beringin yang sering dijadikan tanaman hias.', 50, 'Hutan tropis', 'Tidak terancam'),
-(6, 'Cek', 'swdfsf', 12, 'huahduad', 'Hidup');
+INSERT INTO `flora` (`id_flora`, `nama`, `deskripsi`, `jumlah`, `habitat`, `status_konservasi`, `gambar`) VALUES
+(1, 'Rafflesia arnoldii', 'Bunga terbesar di dunia, ditemukan di hutan hujan Indonesia.', 5, 'Hutan hujan tropis', 'Terancam punah', '57111.jpg'),
+(2, 'Nepenthes', 'Tumbuhan kantong semar yang terkenal dengan mekanisme perangkapnya untuk menangkap serangga.', 20, 'Rawa dan pegunungan', 'Rentan', '04a1d44036f664ede3007d660a8d8c05.jpg'),
+(3, 'Amorphophallus titanum', 'Dikenal sebagai bunga bangkai, memiliki bunga majemuk terbesar di dunia.', 3, 'Hutan tropis', 'Terancam punah', '26184492708_4c0fa621d9_o.png'),
+(4, 'Edelweiss', 'Bunga abadi yang tumbuh di pegunungan tinggi, sering ditemukan di Indonesia.', 15, 'Pegunungan', 'Rentan', '372266.jpg'),
+(5, 'Ficus benjamina', 'Pohon beringin yang sering dijadikan tanaman hias.', 50, 'Hutan tropis', 'Tidak terancam', '44348691675_73ae55d498_o.jpg'),
+(6, 'Cek', 'swdfsf', 12, 'huahduad', 'Hidup', '28298803779_5cda3d6dbd_o.png');
 
 -- --------------------------------------------------------
 
@@ -202,19 +224,19 @@ ALTER TABLE `flora`
 -- AUTO_INCREMENT for table `arsip`
 --
 ALTER TABLE `arsip`
-  MODIFY `id_arsip` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_arsip` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `buku`
 --
 ALTER TABLE `buku`
-  MODIFY `id_buku` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_buku` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `fauna`
 --
 ALTER TABLE `fauna`
-  MODIFY `id_fauna` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_fauna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `flora`

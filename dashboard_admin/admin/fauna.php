@@ -7,43 +7,36 @@
         <?php include 'includes/navbar.php'; ?>
         <?php include 'includes/menubar.php'; ?>
 
-        <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    Fauna List
+                    Fauna
                 </h1>
-                <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                    <li>Fauna</li>
-                    <li class="active">Fauna List</li>
-                </ol>
             </section>
-            <!-- Main content -->
+
             <section class="content">
                 <?php
-                if(isset($_SESSION['error'])){
-                    echo "
-                        <div class='alert alert-danger alert-dismissible'>
-                            <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
-                            <h4><i class='icon fa fa-warning'></i> Error!</h4>
-                            ".$_SESSION['error']."
-                        </div>
-                    ";
-                    unset($_SESSION['error']);
-                }
-                if(isset($_SESSION['success'])){
-                    echo "
-                        <div class='alert alert-success alert-dismissible'>
-                            <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
-                            <h4><i class='icon fa fa-check'></i> Success!</h4>
-                            ".$_SESSION['success']."
-                        </div>
-                    ";
-                    unset($_SESSION['success']);
-                }
-                ?>
+        if(isset($_SESSION['error'])){
+          echo "
+            <div class='alert alert-danger alert-dismissible'>
+              <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+              <h4><i class='icon fa fa-warning'></i> Error!</h4>
+              ".$_SESSION['error']."
+            </div>
+          ";
+          unset($_SESSION['error']);
+        }
+        if(isset($_SESSION['success'])){
+          echo "
+            <div class='alert alert-success alert-dismissible'>
+              <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+              <h4><i class='icon fa fa-check'></i> Success!</h4>
+              ".$_SESSION['success']."
+            </div>
+          ";
+          unset($_SESSION['success']);
+        }
+      ?>
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="box">
@@ -54,47 +47,39 @@
                             <div class="box-body">
                                 <table id="example1" class="table table-bordered">
                                     <thead>
-                                        <th>ID Fauna</th>
+                                        <th>ID</th>
                                         <th>Nama</th>
                                         <th>Deskripsi</th>
                                         <th>Jumlah</th>
                                         <th>Habitat</th>
                                         <th>Status Konservasi</th>
                                         <th>Gambar</th>
-                                        <th>Tools</th>
+                                        <th>Action</th>
                                     </thead>
                                     <tbody>
                                         <?php
-                                        $sql = "SELECT * FROM fauna";
-                                        $query = $conn->query($sql);
-                                        while($row = $query->fetch_assoc()){
-                                            ?>
-                                        <tr>
-                                            <td><?php echo $row['id_fauna']; ?></td>
-                                            <td><?php echo $row['nama']; ?></td>
-                                            <td><?php echo $row['deskripsi']; ?></td>
-                                            <td><?php echo $row['jumlah']; ?></td>
-                                            <td><?php echo $row['habitat']; ?></td>
-                                            <td><?php echo $row['status_konservasi']; ?></td>
-                                            <td>
-                                                <?php
-                                                    if(!empty($row['gambar'])){
-                                                        echo "<img src='images/".$row['gambar']."' width='50px' height='50px'>";
-                                                    }
-                                                    ?>
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-success btn-sm edit btn-flat"
-                                                    data-id="<?php echo $row['id_fauna']; ?>"><i class="fa fa-edit"></i>
-                                                    Edit</button>
-                                                <button class="btn btn-danger btn-sm delete btn-flat"
-                                                    data-id="<?php echo $row['id_fauna']; ?>"><i
-                                                        class="fa fa-trash"></i> Delete</button>
-                                            </td>
-                                        </tr>
-                                        <?php
-                                        }
-                                        ?>
+                    $sql = "SELECT * FROM fauna";
+                    $query = $conn->query($sql);
+                    while($row = $query->fetch_assoc()){
+                      echo "
+                        <tr>
+                          <td>".$row['id_fauna']."</td>
+                          <td>".$row['nama']."</td>
+                          <td>".$row['deskripsi']."</td>
+                          <td>".$row['jumlah']."</td>
+                          <td>".$row['habitat']."</td>
+                          <td>".$row['status_konservasi']."</td>
+                          <td>
+                            <img src='uploads/".$row['gambar']."' height='30px' width='30px'>
+                          </td>
+                          <td>
+                            <button class='btn btn-success btn-sm edit btn-flat' data-id='".$row['id_fauna']."'><i class='fa fa-edit'></i> Edit</button>
+                            <button class='btn btn-danger btn-sm delete btn-flat' data-id='".$row['id_fauna']."'><i class='fa fa-trash'></i> Delete</button>
+                          </td>
+                        </tr>
+                      ";
+                    }
+                  ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -102,14 +87,14 @@
                     </div>
                 </div>
             </section>
-        </div>
 
+        </div>
         <?php include 'includes/footer.php'; ?>
-        <?php include 'Fauna/fauna_modal.php'; ?>
+        <?php include 'fauna_modal.php'; ?>
     </div>
     <?php include 'includes/scripts.php'; ?>
     <script>
-    $(document).ready(function() {
+    $(function() {
         $('.edit').click(function(e) {
             e.preventDefault();
             $('#edit').modal('show');
@@ -123,27 +108,25 @@
             var id = $(this).data('id');
             getRow(id);
         });
+
     });
 
     function getRow(id) {
         $.ajax({
             type: 'POST',
-            url: 'Fauna/fauna_row.php',
+            url: 'fauna_row.php',
             data: {
                 id: id
             },
             dataType: 'json',
             success: function(response) {
-                $('.empid').val(response.id_fauna);
-                $('.reference_number').html(response.id_fauna);
-                $('.del_fauna_name').html(response.nama);
-                $('#fauna_name').html(response.nama);
+                $('.faunaid').val(response.id_fauna);
                 $('#edit_nama').val(response.nama);
                 $('#edit_deskripsi').val(response.deskripsi);
                 $('#edit_jumlah').val(response.jumlah);
                 $('#edit_habitat').val(response.habitat);
                 $('#edit_status_konservasi').val(response.status_konservasi);
-                $('#current_gambar').attr('src', 'images/' + response.gambar);
+                $('.nama').html(response.nama);
             }
         });
     }
