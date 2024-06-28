@@ -51,13 +51,13 @@
                                 <a href="#addnew" data-toggle="modal" class="btn btn-primary btn-sm btn-flat"><i
                                         class="fa fa-plus"></i> New</a>
                                 <a href="download.php" class="btn btn-primary btn-sm btn-flat"><i
-                                        class="fa fa-plus"></i> Bulk Import</a>
+                                        class="fa fa-plus"></i> Import Data</a>
                             </div>
                             <div class="box-body">
                                 <table id="example1" class="table table-bordered">
                                     <thead>
                                         <th>ID Karyawan</th>
-                                        <th>Full Name</th>
+                                        <th>Nama Lengkap</th>
                                         <th>Email</th>
                                         <th>Nomor</th>
                                         <th>Alamat</th>

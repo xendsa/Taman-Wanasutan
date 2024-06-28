@@ -53,13 +53,13 @@
             <div class="box-body">
               <table id="example1" class="table table-bordered">
                 <thead>
-                  <th>Reference ID</th>
-                  <th>Full Name</th>
+                  <th>ID Karyawan</th>
+                  <th>Nama Lengkap</th>
                   <th>Email</th>
-                  <th>Phone</th>
-                  <th>Residence</th>
-                  <th>Programme</th>
-                  <th>Year</th> 
+                  <th>Nomor</th>
+                  <th>Alamat</th>
+                  <th>Posisi</th>
+                  <th>Tahun</th> 
                   <th>Tools</th>
                 </thead>
                 <tbody>
