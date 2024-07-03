@@ -1,4 +1,5 @@
 <?php
+
 $server = 'localhost';
 $user = 'root';
 $pw = '';
@@ -83,4 +84,4 @@ function getDataById($id_arsip)
 
     return $data;
 }
-?>
+?>;
