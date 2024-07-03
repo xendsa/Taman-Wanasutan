@@ -8,7 +8,8 @@ $conn = mysqli_connect($server, $user, $pw, $db);
 
 function getArsip()
 {
-    global $conn; // Menggunakan koneksi global
+    global $conn;
+
     $data = array();
 
     // Query untuk mengambil data dari tabel arsip

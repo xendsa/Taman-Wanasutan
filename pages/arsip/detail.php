@@ -73,7 +73,9 @@ $dataById = getDataById($detail_id);
     </nav>
 
     <section class="break">
-        <h3>Detail Arsip</h3>
+        <div class="item">
+            <h3>Detail Arsip</h3>
+        </div>
     </section>
     <!-- Section Container -->
     <div class="container">

@@ -27,3 +27,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
+  const colsDiv = document.getElementById("colsDiv");
+  const displayLimit = 9;
+  let currentItem = displayLimit;
+
+  loadMoreBtn.addEventListener("click", function() {
+      const items = colsDiv.querySelectorAll(".col");
+      for (let i = currentItem; i < currentItem + displayLimit && i < items.length; i++) {
+          items[i].style.display = "block";
+      }
+      currentItem += displayLimit;
+      if (currentItem >= items.length) {
+          loadMoreBtn.style.display = "none";
+      }
+  });
+
+  const items = colsDiv.querySelectorAll(".col");
+  for (let i = displayLimit; i < items.length; i++) {
+      items[i].style.display = "none";
+  }
+});

@@ -77,18 +77,21 @@ $arsipData = getArsip();
     <div class="arsip-kegiatan">
       <h2 class="titel-arsip">Arsip Kegiatan Taman</h2>
       <div class="cols" id="colsDiv">
-        <?php foreach ($arsipData as $arsip): ?>
-          <div class="col">
-            <a href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>" class="img-link">
-              <img src="picture/i.jpg" alt="Kegiatan 1">
-            </a>
-            <h1 class="title-arsip">
-              <?php echo htmlspecialchars($arsip['nama']); ?>
-            </h1>
-            <a href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>" class="detail-access">Lihat
-              Detail</a>
-          </div>
-        <?php endforeach; ?>
+        <?php if (empty($arsipData)): ?>
+            <p>No data found.</p>
+        <?php else: ?>
+            <?php foreach ($arsipData as $arsip): ?>
+                <div class="col">
+                    <a href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>" class="img-link">
+                        <img src="picture/i.jpg" alt="Kegiatan 1">
+                    </a>
+                    <h1 class="title-arsip">
+                        <?php echo htmlspecialchars($arsip['nama']); ?>
+                    </h1>
+                    <a href="detail.php?id_arsip=<?php echo urlencode($arsip['id_arsip']); ?>" class="detail-access">Lihat Detail</a>
+                </div>
+            <?php endforeach; ?>
+        <?php endif; ?>
       </div>
       <div class="cols-search" id='cols-search'>
         <?php
@@ -162,18 +165,22 @@ $arsipData = getArsip();
   <script src="js/script.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const colsDiv = document.getElementById('colsDiv');
-      const dataFound = <?php echo json_encode($dataFound); ?>;
+    const colsDiv = document.getElementById('colsDiv');
+    const dataFound = <?php echo json_encode($dataFound); ?>;
+    console.log("Data Found: ", dataFound); // Debugging dataFound
 
-      if (dataFound) {
+    if (dataFound === 'true') {
         colsDiv.style.display = 'none';
-      }
-    })
+    }
 
-    document.getElementById('seeAll').addEventListener('click', () => {
-      document.querySelector('.cols-search').style.display = 'none';
-      document.getElementById('colsDiv').style.display = 'grid';
-    });
+    const seeAllBtn = document.getElementById('seeAll');
+    if (seeAllBtn) {
+        seeAllBtn.addEventListener('click', () => {
+            document.querySelector('.cols-search').style.display = 'none';
+            document.getElementById('colsDiv').style.display = 'grid';
+        });
+    }
+});
   </script>
 </body>
 

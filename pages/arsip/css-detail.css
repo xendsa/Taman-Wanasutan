@@ -126,13 +126,20 @@ body {
   height: 20%;
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+.break .item {
+  width: 90%;
+  height: 90%;
   background: #8888889e;
   border: 1px solid #b8b8b8;
   box-shadow: 0 0 10px #b8b8b8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.break h3 {
+.break .item h3 {
   color: #fff;
 }
 
@@ -147,7 +154,7 @@ body {
 }
 
 .container .img-fluid {
-  width: 50%;
+  width: 70%;
   height: 60%;
   border: 1px solid var(--gray);
   padding: 2rem;
@@ -155,16 +162,36 @@ body {
 }
 
 .container .desc {
-  width: 50%;
+  width: 70%;
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  align-items: center;
+}
+
+.container .desc p {
+  text-align: center;
 }
 
 .container .btn {
   display: flex;
   gap: 2rem;
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin-top: 2rem;
+}
+
+.container .btn button {
+  transition: .2s;
+  font-size: 17px;
+  width: 30%;
+}
+
+.container .btn button:hover {
+  background: var(--cyan);
+  color: #fff;
 }
 
 .footer {
@@ -203,4 +230,82 @@ body {
   color: var(--cyan);
   font-size: 1.1rem;
   text-decoration: none;
+}
+
+/* Query Phone */
+@media (min-width: 310px) and (max-width: 430px){
+  *, body{
+    font-size: 80%;
+  }
+
+  .container {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .container .img-fluid {
+    width: 90%;
+  }
+
+  .container .desc {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .desc p {
+    text-align: center;
+    font-size: 130%;
+  }
+}
+
+/* Query Tablet */ 
+@media (min-width: 431px) and (max-width: 890px) {
+  *, body {
+    font-size: 100%;
+  }
+
+  .container {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 20%;
+  }
+
+  .container .img-fluid {
+    width: 90%;
+  }
+
+  .container .desc {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .desc p {
+    text-align: center;
+    font-size: 135%;
+  }
+
+  .container .desc h1 {
+    font-size: 200%;
+  }
+
+  .container .desc h3 {
+    font-size: 170%;
+  }
+
+  .container .btn {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-top: 5%;
+  }
+
+  .container .btn button {
+    width: 30%;
+    padding: 15px;
+    font-size: 120%;
+  }
 }
