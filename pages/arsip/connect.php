@@ -82,4 +82,4 @@ function getDataById($id_arsip)
 
     return $data;
 }
-?>
+?>;
