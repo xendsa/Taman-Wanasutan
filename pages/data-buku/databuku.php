@@ -58,19 +58,27 @@
         <div class="book-list">
 
             <div class="book-item">
-                <img src="picture/buku1.jpeg" alt="">
+                <div class="book-image-container">
+                    <img src="picture/buku1.jpeg" alt="">
+                </div>
                 <h3>Buku 1</h3>
             </div>
             <div class="book-item">
-                <img src="picture/buku2.jpg" alt="">
+                <div class="book-image-container">
+                    <img src="picture/buku2.jpg" alt="">
+                </div>
                 <h3>Buku 1</h3>
             </div>
             <div class="book-item">
-                <img src="picture/buku3.jpg" alt="">
+                <div class="book-image-container">
+                    <img src="picture/buku3.jpg" alt="">
+                </div>
                 <h3>Buku 1</h3>
             </div>
             <div class="book-item">
-                <img src="picture/buku4.jpg" alt="">
+                <div class="book-image-container">
+                    <img src="picture/buku4.jpg" alt="">
+                </div>
                 <h3>Buku 1</h3>
             </div>
         </div>

@@ -126,7 +126,7 @@ body {
 .book-container .book-list{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 0.5fr));
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .book-container .book-list .book-item{
@@ -137,9 +137,33 @@ body {
   cursor: pointer;
   overflow: hidden;
   border-radius: 10px;
+  -moz-transition: -moz-transform 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s ease;
 }
 
-.book-list .book-item img{
-  max-width: 250px;
-  min-height: 300px;
+.book-container .book-list .book-item .book-image-container{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: 15rem;
+}
+
+.book-container .book-list .book-item .book-image-container img {
+  align-items: center;
+  height: 12rem;
+  max-width: 95%;
+  margin: 0;
+  object-fit: cover;
+}
+
+.book-container .book-list .book-item:hover {
+  transform: scale(1.2);
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+}
+
+.book-container .book-list .book-item h3{
+  margin-top: 0.5rem;
+  position: relative;
 }
