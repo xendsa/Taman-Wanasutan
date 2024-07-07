@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "taman-asri";
+$dbname = "taman_asri";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -11,23 +11,18 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM fauna";
-$result = $conn->query($sql);
+function getData($table) {
+    global $conn;
+    $sql = "SELECT * FROM $table";
+    $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        echo '<div class="grid-item">';
-        echo '<img src="'.$row['gambar'].'" alt="'.$row['nama'].'">';
-        echo '<div class="description">';
-        echo '<h3>'.$row['nama'].'</h3>';
-        echo '<p>'.$row['deskripsi'].'</p>';
-        echo '</div>';
-        echo '</div>';
+    $data = [];
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
     }
-} else {
-    echo "No images found.";
+    return $data;
 }
-
-$conn->close();
 
 ?>;
