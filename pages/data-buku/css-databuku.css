@@ -109,3 +109,37 @@ body {
 .navbar-collapse {
   border-top: 1px solid #dee2e6; /* Garis atas dropdown */
 }
+
+.header{
+  margin: 20px 20px 20px;
+  text-align: start;
+}
+
+/* grid books item list */
+.book-container{
+  margin: auto;
+  align-items: center;
+  position: relative;
+  max-width: 1200px;
+}
+
+.book-container .book-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 0.5fr));
+  gap: 0.5rem;
+}
+
+.book-container .book-list .book-item{
+  text-align: center;
+  padding: 1rem 0.5rem;
+  background-color: #f8f9fa;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.book-list .book-item img{
+  max-width: 250px;
+  min-height: 300px;
+}

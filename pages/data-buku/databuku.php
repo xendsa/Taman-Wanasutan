@@ -51,9 +51,30 @@
             </div>
         </div>
     </nav>
-    <i>
-        <h1 class="text-center">Data Buku</h1>
-    </i>
+    <div class="header">
+        <h1>Daftar Buku Pada POCA</h1>
+    </div>
+    <div class="book-container">
+        <div class="book-list">
+
+            <div class="book-item">
+                <img src="picture/buku1.jpeg" alt="">
+                <h3>Buku 1</h3>
+            </div>
+            <div class="book-item">
+                <img src="picture/buku2.jpg" alt="">
+                <h3>Buku 1</h3>
+            </div>
+            <div class="book-item">
+                <img src="picture/buku3.jpg" alt="">
+                <h3>Buku 1</h3>
+            </div>
+            <div class="book-item">
+                <img src="picture/buku4.jpg" alt="">
+                <h3>Buku 1</h3>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
