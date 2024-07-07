@@ -81,8 +81,48 @@
                 </div>
                 <h3>Buku 1</h3>
             </div>
+            <div class="book-item">
+                <div class="book-image-container">
+                    <img src="picture/buku1.jpeg" alt="">
+                </div>
+                <h3>Buku 1</h3>
+            </div>
+
         </div>
     </div>
+    
+    <div class="footer">
+        <div class="top">
+            <div class="footer-link">
+                <h2>Content</h2>
+                <div class="links">
+                    <a href="#dashboard">Halaman utama</a>
+                    <a href="#arsip-kegiatan">Arsip Kegiatan</a>
+                    <a href="#arsip-kompos">Arsip Kompos</a>
+                    <a href="#arsip-event">Arsip Event</a>
+                </div>
+            </div>
+            <div class="informations">
+                <h2>Informasi</h2>
+                <div class="links">
+                    <a href="#all-arsips">Informasi Umum</a>
+                </div>
+            </div>
+            <div class="sosial-media">
+                <h2>Sosial Media</h2>
+                <div class="links">
+                    <a href="#" id="instagram-btn"><i class="ri-instagram-fill"></i>
+                        Instagram</a>
+                    <a href="#" id="tiktok-btn"><i class="ri-tiktok-fill"></i> TikTok</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="../../index.php">Taman Wanasutan</a>
+            <a href="arsip.php#navbar" class="back-btn"><i class="ri-arrow-up-s-fill"></i></a>
+        </div>
+    </div>
+
 </body>
 
 </html>
