@@ -52,7 +52,14 @@
         </div>
     </nav>
     <div class="header">
-        <h1>Daftar Buku Pada POCA</h1>
+        <div class="header-image">
+            <img src="picture/background.jpg" alt="">
+        </div>
+        <div class="header-content">
+            <p>Pojok Baca</p>
+            <p>Membaca merupakan awal dari membuka dunia</p>
+            <button type="button" class="btn btn-outline-primary">Lihat Daftar Buku</button>
+        </div>
     </div>
     <div class="book-container">
         <div class="book-list">
@@ -90,7 +97,7 @@
 
         </div>
     </div>
-    
+
     <div class="footer">
         <div class="top">
             <div class="footer-link">
