@@ -53,7 +53,7 @@
     </nav>
     <div class="header">
         <div class="header-image">
-            <img src="picture/background.jpg" alt="">
+            <img src="picture/readingbooks.png" alt="">
         </div>
         <div class="header-content">
             <p>Pojok Baca</p>
