@@ -112,11 +112,14 @@ body {
 
 /* header start */
 .header{
-  margin: 20px 20px 20px;
+  /* margin: 20px 20px 20px; */
   text-align: start;
-  background-color: rgba(122, 168, 236, 0.1);
+  background-color: rgba(27, 94, 195, 0.1);
   display: flex;
   flex-direction: row;
+  max-height: fit-content;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
 }
 
 .header .header-image{
@@ -139,6 +142,7 @@ body {
 .header .header-content h3{
   font-size: clamp(1rem, 2vw + 1rem, 2.5rem);
   font-style: oblique;
+  margin-top: 25%;
 }
 
 .header .header-content p{
