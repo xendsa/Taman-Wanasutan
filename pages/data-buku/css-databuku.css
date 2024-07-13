@@ -130,6 +130,26 @@ body {
   width: 100%;
 }
 
+.header .header-content{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  marker-start: 50px;
+}
+
+.header .header-content h3{
+  font-size: clamp(1rem, 2vw + 1rem, 2.5rem);
+  font-style: oblique;
+}
+
+.header .header-content p{
+  font-size: large;
+  font-style: italic;
+}
+
+.header .header-content .btn btn-outline-primary{
+  padding-bottom: 20px;
+}
+
 /* grid books item list */
 .book-container{
   margin: auto;
@@ -183,6 +203,8 @@ body {
   margin-top: 0.5rem;
   position: relative;
 }
+
+
 /* grid books item ends */
 
 /* Footer Style Custom Start */

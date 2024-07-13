@@ -56,7 +56,7 @@
             <img src="picture/readingbooks.png" alt="">
         </div>
         <div class="header-content">
-            <p>Pojok Baca</p>
+            <h3>Pojok Baca</h3>
             <p>Membaca merupakan awal dari membuka dunia</p>
             <button type="button" class="btn btn-outline-primary">Lihat Daftar Buku</button>
         </div>
