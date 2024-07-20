@@ -64,7 +64,7 @@
     <div class="book-container">
         <div class="book-list">
 
-            <div class="book-item">
+            <div class="book-item" href="detail/bookdetail.php">
                 <div class="book-image-container">
                     <img src="picture/buku1.jpeg" alt="">
                 </div>
@@ -129,6 +129,8 @@
             <a href="arsip.php#navbar" class="back-btn"><i class="ri-arrow-up-s-fill"></i></a>
         </div>
     </div>
+
+    <script src="js/script.js"></script>
 
 </body>
 

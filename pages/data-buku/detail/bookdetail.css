@@ -1,0 +1,16 @@
+body {
+    background: url(../picture/background.jpg);
+    filter: blur(8px);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container img {
+    max-height: 50%;
+    align-items: center;
+}
