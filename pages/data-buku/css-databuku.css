@@ -114,7 +114,7 @@ body {
 .header{
   /* margin: 20px 20px 20px; */
   text-align: start;
-  background-color: rgba(27, 94, 195, 0.1);
+  background: radial-gradient(circle, rgb(90, 134, 216), rgb(149, 180, 248));
   display: flex;
   flex-direction: row;
   max-height: fit-content;
@@ -131,6 +131,9 @@ body {
 
 .header .header-image img{
   width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  marker-start: 50px;
 }
 
 .header .header-content{
