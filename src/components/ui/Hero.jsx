@@ -59,6 +59,10 @@ function HeroSection16() {
               <BugAntIcon className="h-5 w-5" />
               Flora Fauna
             </NavItem>
+            <NavItem>
+              <BugAntIcon className="h-5 w-5" />
+              Poca Buku
+            </NavItem>
           </ul>
           <IconButton
             variant="text"
