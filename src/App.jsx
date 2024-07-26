@@ -6,14 +6,14 @@ import BlogSection11 from "./components/ui/Section";
 
 function App() {
   return (
-    <div>
+    <>
       <HeroSection16 />
       <div className="container mx-auto px-4">
         {/* <Card /> */}
         <BlogSection11 />
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 
