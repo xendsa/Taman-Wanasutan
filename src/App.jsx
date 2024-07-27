@@ -1,19 +1,19 @@
-import Header from "./components/Header/Header";
-import Footer from "./components/ui/Footer";
-import HeroSection16 from "./components/ui/Hero";
-import BlogSection11 from "./components/ui/Section";
-import WhoIsMe from "./components/WhoIsMe";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MainLayout from "./Layout/MainLayout";
+import HomePage from "./Pages/HomePage";
+import AboutPage from "./Pages/AboutPage";
 
 function App() {
   return (
     <>
-      <Header />
-      <HeroSection16 />
-      <div className="container mx-auto px-4">
-        <BlogSection11 />
-        <WhoIsMe />
-      </div>
-      <Footer />
+      <BrowserRouter >
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="about" element={<AboutPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

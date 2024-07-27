@@ -2,6 +2,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { BugAntIcon, RectangleStackIcon, Squares2X2Icon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { Collapse, IconButton, Navbar, Typography } from "@material-tailwind/react";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function NavItem({ children }) {
     return (
@@ -29,11 +30,14 @@ export default function Header() {
         );
     }, []);
     return (
-        <Navbar className="fixed top-0 left-0 right-0 z-50 mx-auto max-w-screen-2xl py-1 md:py-5 px-2 md:px-0">
+        <Navbar className="fixed top-0 left-0 right-0 z-50 mx-auto max-w-screen-2xl py-1 md:py-5 px-2 pt-4 md:px-0">
             <div className="container mx-auto flex items-center justify-between">
-                <Typography color="blue-gray" className="text-lg font-bold">
-                    Taman Wanasutan
-                </Typography>
+                <Link to="/">
+                    <Typography color="blue-gray" className="text-lg font-bold">
+                        Taman Wanasutan
+                    </Typography>
+                </Link>
+
                 <ul className="ml-10 hidden items-center gap-6 lg:flex">
                     <NavItem>
                         <RectangleStackIcon className="h-5 w-5" />

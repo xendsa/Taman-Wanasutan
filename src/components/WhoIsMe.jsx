@@ -1,4 +1,5 @@
 import { Button } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 export default function WhoIsMe() {
     const sendProps = {
@@ -18,13 +19,15 @@ export default function WhoIsMe() {
             <div className="flex flex-col justify-center">
                 <h2 className="font-bold text-3xl mb-5">{sendProps.title}</h2>
                 <p className="mb-5">{sendProps.description}</p>
+                <Link to="/about">
+                    <Button
+                        size="lg"
+                        color="green"
+                    >
+                        Baca Lebih Lanjut
+                    </Button>
+                </Link>
 
-                <Button
-                    size="lg"
-                    color="green"
-                >
-                    Baca Lebih Lanjut
-                </Button>
 
             </div>
         </section>
