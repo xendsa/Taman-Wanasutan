@@ -176,7 +176,7 @@ export default function MegaMenuWithPlacement() {
   }, []);
 
   return (
-    <Navbar className="max-w-screen-2xl max-h-32 px-14 py-2">
+    <Navbar className="fixed left-0 right-0 top-0 z-50 max-w-screen-2xl max-h-32 px-14 py-2">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
