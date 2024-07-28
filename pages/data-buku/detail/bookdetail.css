@@ -11,6 +11,7 @@ body {
 }
 
 .container img {
-    max-height: 50%;
-    align-items: center;
+    height: 3rem;
+    flex: 1;
+    background-size: cover;
 }
