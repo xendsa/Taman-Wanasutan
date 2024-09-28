@@ -21,6 +21,34 @@ const NavItem = ({ href, children, active = false }) => (
   </a>
 );
 
+const NavData = [
+  {
+    label: "Beranda",
+    href: "/",
+    active: true,
+  },
+  {
+    label: "Hewan",
+    href: "/hewan",
+    active: false,
+  },
+  {
+    label: "Tiket",
+    href: "/tiket",
+    active: false,
+  },
+  {
+    label: "Dukung",
+    href: "/dukung",
+    active: false,
+  },
+  {
+    label: "Blog",
+    href: "/blog",
+    active: false,
+  },
+];
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -32,17 +60,15 @@ export default function Navbar() {
             <img
               src="https://www.bali-zoo.com/_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=256&q=75"
               alt="Bali Zoo"
-              className="h-12 w-aut0"
+              className="h-12 w-auto"
             />
           </a>
-          <div className="flex p-48 items-center mr-12 space-x-6 text-sm font-medium">
-            <NavItem href="/" active>
-              BERANDA
-            </NavItem>
-            <NavItem href="/hewan">HEWAN</NavItem>
-            <NavItem href="/tiket">TIKET</NavItem>
-            <NavItem href="/dukung">DUKUNG</NavItem>
-            <NavItem href="/blog">BLOG</NavItem>
+          <div className="flex items-center mr-12 space-x-6 text-sm font-medium">
+            {NavData.map((data) => (
+              <NavItem key={data.label} href={data.href} active={data.active}>
+                {data.label}
+              </NavItem>
+            ))}
           </div>
         </div>
 
@@ -58,13 +84,11 @@ export default function Navbar() {
           </SheetTrigger>
           <SheetContent side="left" className="pr-0">
             <nav className="flex flex-col space-y-4">
-              <NavItem href="/" active>
-                BERANDA
-              </NavItem>
-              <NavItem href="/hewan">HEWAN</NavItem>
-              <NavItem href="/tiket">TIKET</NavItem>
-              <NavItem href="/dukung">DUKUNG</NavItem>
-              <NavItem href="/blog">BLOG</NavItem>
+              {NavData.map((data) => (
+                <NavItem key={data.label} href={data.href} active={data.active}>
+                  {data.label}
+                </NavItem>
+              ))}
             </nav>
           </SheetContent>
         </Sheet>
