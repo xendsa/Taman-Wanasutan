@@ -2,11 +2,9 @@ import { useState, useEffect } from "react";
 import {
   ChevronLeft,
   ChevronRight,
-  Clock,
-  Calendar,
-  MapPin,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import InfoCards from "@/components/home/InfoCard";
 
 const slides = [
   {
@@ -101,22 +99,10 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 flex justify-center bg-[#00b8d4] text-white">
-        <div className="container flex justify-between py-4">
-          <div className="flex items-center space-x-2">
-            <Clock className="h-5 w-5" />
-            <span>Jam Buka: Sabtu | 09:00 - 17:00</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Calendar className="h-5 w-5" />
-            <span>Aktivitas: Jadwal Hari Ini</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <MapPin className="h-5 w-5" />
-            <span>Peta Kebun Binatang: Lihat Peta</span>
-          </div>
-        </div>
+      <div className="absolute bottom-0 left-0 right-0 flex justify-center  text-white z-10">
+        <InfoCards />
       </div>
+
 
       <div className="absolute right-0 top-0 bg-[#ff9800] px-4 py-2 text-white">
         PESAN SEKARANG
