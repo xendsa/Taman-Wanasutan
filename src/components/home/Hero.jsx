@@ -65,7 +65,7 @@ export default function Hero() {
               <div className="flex h-full flex-col justify-center text-white">
                 <h1 className="mb-2 text-5xl font-bold">{slide.title}</h1>
                 <p className="mb-4 text-xl">{slide.subtitle}</p>
-                <Button className="w-40 bg-[#00b8d4] hover:bg-[#00a0b8]">
+                <Button className="w-40 bg-primary hover:bg-primary">
                   Lebih Lanjut
                 </Button>
               </div>

@@ -14,7 +14,7 @@ const NavItem = ({ href, children, active = false }) => (
   <a
     href={href}
     className={`text-sm font-medium transition-colors hover:text-primary ${
-      active ? "text-[#00b8d4]" : "text-gray-500"
+      active ? "text-primary" : "text-gray-500"
     }`}
   >
     {children}
@@ -29,22 +29,22 @@ const NavData = [
   },
   {
     label: "Hewan",
-    href: "/hewan",
+    href: "/fauna",
     active: false,
   },
   {
-    label: "Tiket",
-    href: "/tiket",
+    label: "Tumbuhan",
+    href: "/flora",
+    active: false,
+  },
+  {
+    label: "Arsip",
+    href: "/arsip",
     active: false,
   },
   {
     label: "Dukung",
     href: "/dukung",
-    active: false,
-  },
-  {
-    label: "Blog",
-    href: "/blog",
     active: false,
   },
 ];
