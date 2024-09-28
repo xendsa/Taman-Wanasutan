@@ -1,4 +1,4 @@
-import AnimalSection from "@components/hewan";
+import AnimalSection from "@components/hewandantumbuhan";
 
 function FloraFaunaPages() {
   return (
