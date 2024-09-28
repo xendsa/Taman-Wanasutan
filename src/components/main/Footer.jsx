@@ -29,13 +29,13 @@ const dataMedsos = [
   {
     label: "Instagram",
     className: "hover:text-gray-300",
-    href: "http://instagram.com",
+    href: "https://www.instagram.com/explore/locations/101508235757475/taman-wanasutan-asri/",
     icon: <Instagram size={24} className="inline-block" />,
   },
   {
     label: "Youtube",
     className: "hover:text-gray-300",
-    href: "http://youtube.com",
+    href: "https://www.youtube.com/watch?v=hByjT61jKgU",
     icon: <Youtube size={24} className="inline-block" />,
   },
 ];
