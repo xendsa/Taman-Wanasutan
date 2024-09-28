@@ -14,7 +14,7 @@ const NavItem = ({ href, children, active = false }) => (
   <a
     href={href}
     className={`text-sm font-medium transition-colors hover:text-primary ${
-      active ? "text-[#00b8d4]" : "text-gray-500"
+      active ? "text-primary" : "text-gray-500"
     }`}
   >
     {children}
