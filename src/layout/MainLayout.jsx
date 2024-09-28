@@ -1,9 +1,11 @@
+import Navbar from "@components/main/Navbar";
+
 function MainLayout() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 }
 
-export default MainLayout
+export default MainLayout;
