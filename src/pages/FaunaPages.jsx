@@ -1,9 +1,11 @@
+import AnimalSection from "@components/hewan";
+
 function FaunaPages() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <div>
+      <AnimalSection />
+    </div>
+  );
 }
 
-export default FaunaPages
+export default FaunaPages;

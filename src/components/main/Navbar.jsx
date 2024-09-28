@@ -29,22 +29,22 @@ const NavData = [
   },
   {
     label: "Hewan",
-    href: "/hewan",
+    href: "/fauna",
     active: false,
   },
   {
-    label: "Tiket",
-    href: "/tiket",
+    label: "Tumbuhan",
+    href: "/flora",
+    active: false,
+  },
+  {
+    label: "Arsip",
+    href: "/arsip",
     active: false,
   },
   {
     label: "Dukung",
     href: "/dukung",
-    active: false,
-  },
-  {
-    label: "Blog",
-    href: "/blog",
     active: false,
   },
 ];
