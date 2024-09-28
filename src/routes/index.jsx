@@ -18,9 +18,9 @@ export default function AppRoutes() {
         <Route path="flora" element={<FloraPages />} />
         <Route path="fauna" element={<FaunaPages />} />
         <Route path="arsip" element={<ArsipPages />} />
-        <Route path="flora/{slug}" element={<DetailFloraPages />} />
-        <Route path="fauna/{slug}" element={<DetailFaunaPages />} />
-        <Route path="arsip/{slug}" element={<DetailArsipPages />} />
+        <Route path="flora/detail/:slug" element={<DetailFloraPages />} />
+        <Route path="fauna/detail/:slug" element={<DetailFaunaPages />} />
+        <Route path="arsip/detail/:slug" element={<DetailArsipPages />} />
       </Route>
     </Routes>
   );
