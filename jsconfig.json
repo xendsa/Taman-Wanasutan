@@ -9,16 +9,19 @@
                 "./src/assets/*"
             ],
             "@pages/*": [
-                "pages/*"
+                "./src/pages/*"
             ],
             "@layout/*": [
-                "layout/*"
+                "/src/layout/*"
             ],
             "@routes/*": [
-                "routes/*"
+                "/src/routes/*"
             ],
             "@/*": [
                 "./src/*"
+            ],
+            "@utils/*": [
+                "./src/utils/*"
             ]
         }
     }

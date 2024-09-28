@@ -1,6 +1,6 @@
 import AnimalSection from "@components/hewan";
 
-function FaunaPages() {
+function FloraFaunaPages() {
   return (
     <div>
       <AnimalSection />
@@ -8,4 +8,4 @@ function FaunaPages() {
   );
 }
 
-export default FaunaPages;
+export default FloraFaunaPages;

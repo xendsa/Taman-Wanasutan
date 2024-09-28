@@ -28,13 +28,8 @@ const NavData = [
     active: true,
   },
   {
-    label: "Hewan",
-    href: "/fauna",
-    active: false,
-  },
-  {
-    label: "Tumbuhan",
-    href: "/flora",
+    label: "Hewan dan Tumbuhan",
+    href: "/flora-fauna",
     active: false,
   },
   {
@@ -43,8 +38,8 @@ const NavData = [
     active: false,
   },
   {
-    label: "Dukung",
-    href: "/dukung",
+    label: "Poca",
+    href: "/poca",
     active: false,
   },
 ];
