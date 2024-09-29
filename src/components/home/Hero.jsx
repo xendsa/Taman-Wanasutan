@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+ import { useState, useEffect } from "react";
 import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import InfoCards from "@/components/home/InfoCard";
+
+
 
 const slides = [
   {
@@ -60,6 +61,7 @@ export default function Hero() {
             alt={slide.title}
             className="h-full w-full object-cover"
           />
+          
           <div className="absolute inset-0 bg-black bg-opacity-40">
             <div className="container mx-auto h-full px-4">
               <div className="flex h-full flex-col justify-center text-white">
@@ -70,6 +72,11 @@ export default function Hero() {
                 </Button>
               </div>
             </div>
+          </div>
+          <div className="absolute bottom-0 left-0 w-full">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 161">
+                  <path fill="#FFFF" fillOpacity="1" d="M0,64L60,80C120,96,240,128,360,138.7C480,149,600,139,720,122.7C840,107,960,85,1080,90.7C1200,96,1320,128,1380,144L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+              </svg>
           </div>
         </div>
       ))}
@@ -99,9 +106,7 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 flex justify-center  text-white z-10">
-        <InfoCards />
-      </div>
+      
 
 
       <div className="absolute right-0 top-0 bg-[#ff9800] px-4 py-2 text-white">
