@@ -6,6 +6,7 @@ export const animalDataDummy = [
     src: "https://tanilink.com/uploads/berita/2019-04-15/40437356_1879616295466619_6493002911366543558_n.jpg",
     alt: "Orangutan",
     slug: "orangutan",
+    badge: "hewan",
   },
   {
     title: "Shikanoko",

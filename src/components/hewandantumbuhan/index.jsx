@@ -64,13 +64,15 @@ export default function AnimalSection() {
 
       <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {animalDataDummy.map((animal, index) => (
-          <div key={index} className="overflow-hidden rounded-lg">
-            <img
-              src={animal.src}
-              alt={animal.alt}
-              className="h-full w-full object-cover transition-transform duration-300 hover:scale-110"
-            />
-          </div>
+          <a key={index} href={`flora-fauna/detail/${animal.slug}`}>
+            <div className="overflow-hidden rounded-lg">
+              <img
+                src={animal.src}
+                alt={animal.alt}
+                className="h-full w-full object-cover transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+          </a>
         ))}
       </div>
     </div>
