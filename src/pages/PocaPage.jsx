@@ -1,7 +1,9 @@
+import TopBackground from "@components/pojokbaca/ComponentBooks"
+
 function PocaPage (){
     return (
-        <div className="poca-page">
-
+        <div>
+            <TopBackground/>
         </div>
     )
 }
