@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Menu, Search, ChevronDown } from "lucide-react";
 import { Button } from "@components/ui/button";
@@ -30,17 +31,17 @@ const NavData = [
   {
     label: "Hewan dan Tumbuhan",
     href: "/flora-fauna",
-    active: false,
+    active: true,
   },
   {
     label: "Arsip",
     href: "/arsip",
-    active: false,
+    active: true,
   },
   {
     label: "Poca",
     href: "/poca",
-    active: false,
+    active: true,
   },
 ];
 
