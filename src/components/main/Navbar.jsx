@@ -1,67 +1,75 @@
-/* eslint-disable react/prop-types */
-import { useState } from "react";
-import { Menu, Search, ChevronDown } from "lucide-react";
-import { Button } from "@components/ui/button";
+
+import React, { useState, useEffect } from "react"
+import { Link, useLocation } from "react-router-dom"
+import { Menu, Search, ChevronDown } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@components/ui/dropdown-menu";
-import { Input } from "@/components/ui/input";
-import { Sheet, SheetContent, SheetTrigger } from "@components/ui/sheet";
+} from "@/components/ui/dropdown-menu"
+import { Input } from "@/components/ui/input"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
-const NavItem = ({ href, children, active = false }) => (
-  <a
-    href={href}
+const NavItem = ({ to, children, active }) => (
+  <Link
+    to={to}
     className={`text-sm font-medium transition-colors hover:text-primary ${
       active ? "text-primary" : "text-gray-500"
     }`}
   >
     {children}
-  </a>
-);
+  </Link>
+)
 
 const NavData = [
   {
     label: "Beranda",
-    href: "/",
-    active: true,
+    to: "/",
   },
   {
     label: "Hewan dan Tumbuhan",
-    href: "/flora-fauna",
-    active: true,
+    to: "/flora-fauna",
   },
   {
     label: "Arsip",
-    href: "/arsip",
-    active: true,
+    to: "/arsip",
   },
   {
     label: "Poca",
-    href: "/poca",
-    active: true,
+    to: "/poca",
   },
-];
+]
 
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+export default function DynamicNavbar() {
+  const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
+
+  const isActive = (to) => {
+    if (to === "/" && location.pathname === "/") return true
+    if (to !== "/" && location.pathname.startsWith(to)) return true
+    return false
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-24 p-9 items-center">
         <div className="mr-4 hidden md:flex">
-          <a href="/" className="mr-6 flex items-center space-x-2">
+          <Link to="/" className="mr-6 flex items-center space-x-2">
             <img
               src="https://www.bali-zoo.com/_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=256&q=75"
               alt="Bali Zoo"
               className="h-12 w-auto"
             />
-          </a>
+          </Link>
           <div className="flex items-center mr-12 space-x-6 text-sm font-medium">
             {NavData.map((data) => (
-              <NavItem key={data.label} href={data.href} active={data.active}>
+              <NavItem
+                key={data.label}
+                to={data.to}
+                active={isActive(data.to)}
+              >
                 {data.label}
               </NavItem>
             ))}
@@ -81,7 +89,11 @@ export default function Navbar() {
           <SheetContent side="left" className="pr-0">
             <nav className="flex flex-col space-y-4">
               {NavData.map((data) => (
-                <NavItem key={data.label} href={data.href} active={data.active}>
+                <NavItem
+                  key={data.label}
+                  to={data.to}
+                  active={isActive(data.to)}
+                >
                   {data.label}
                 </NavItem>
               ))}
@@ -112,5 +124,5 @@ export default function Navbar() {
         </div>
       </div>
     </header>
-  );
+  )
 }
