@@ -1,7 +1,7 @@
 import Hero from "@components/home/Hero";
 import WanasutanProgram from "@components/home/WanasutanProgram";
 import InfoCards from "@/components/home/InfoCard";
-
+import GalleryPanel from "@components/home/GalleryPanel";
 
 function HomePages() {
   return (
@@ -11,7 +11,11 @@ function HomePages() {
     </div>
     <div className="absolute -mb-[10em] bottom-0 left-0 right-0  flex justify-center text-white z-10">
       <InfoCards />
+    </div>
+    <div>
+      <GalleryPanel />
     </div></>
+    
 
   );
 }
