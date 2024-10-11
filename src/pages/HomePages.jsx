@@ -2,6 +2,7 @@ import Hero from "@components/home/Hero";
 import WanasutanProgram from "@components/home/WanasutanProgram";
 import InfoCards from "@/components/home/InfoCard";
 import GalleryPanel from "@components/home/GalleryPanel";
+import InfoDataset from "@components/home/InfoData";
 
 function HomePages() {
   return (
@@ -14,6 +15,9 @@ function HomePages() {
     </div>
     <div>
       <GalleryPanel />
+    </div>
+    <div>
+      <InfoDataset />
     </div></>
     
 

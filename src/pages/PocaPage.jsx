@@ -1,9 +1,11 @@
-function PocaPage (){
-    return (
-        <div className="poca-page">
+import AnimalSection from "@components/hewandantumbuhan";
 
-        </div>
-    )
+function FloraFaunaPages() {
+  return (
+    <div>
+      <AnimalSection />
+    </div>
+  );
 }
 
-export default PocaPage
+export default FloraFaunaPages;

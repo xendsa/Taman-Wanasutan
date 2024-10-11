@@ -1,9 +1,10 @@
 import React from "react";
-import { Clock, CalendarDays, LocateFixed } from 'lucide-react';
+import { Clock, CalendarDays, LocateFixed, ChevronRight } from 'lucide-react';
+
 
 const InfoCards = () => {
     const cards = [
-        { icon: Clock, title: 'Zoo Hours', description: 'Saturday | 09.00 AM - 17.00 PM' },
+        { icon: Clock, title: 'Zoo Hours', description: 'Saturday | 07.00 AM - 17.00 PM' },
         { icon: CalendarDays, title: "What's On", description: "See Today's" },
         { icon: LocateFixed, title: 'Zoo Maps', description: 'See Our Maps' }
     ];
@@ -21,13 +22,11 @@ const InfoCards = () => {
                         </div>
                         <div>
                             <h3 className="text-sm md:text-xl font-bold mb-1">{card.title}</h3>
-                            <p className="md:text-sm text-[8px]">{card.description}</p> 
+                            <p className="md:text-sm text-[4px] flex items-center">
+                                {card.description}
+                                <ChevronRight className="ml-1" />
+                            </p> 
                         </div>
-                    </div>
-                    <div className="text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                        </svg>
                     </div>
                 </div>
             ))}

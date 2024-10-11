@@ -1,67 +1,70 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
-import { Menu, Search, ChevronDown } from "lucide-react";
-import { Button } from "@components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@components/ui/dropdown-menu";
-import { Input } from "@/components/ui/input";
-import { Sheet, SheetContent, SheetTrigger } from "@components/ui/sheet";
+/* eslint-disable no-unused-vars */
+import React, { useState, useEffect } from "react"
+import { Link, useLocation } from "react-router-dom"
+import { Menu, Search, ChevronDown } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
-const NavItem = ({ href, children, active = false }) => (
-  <a
-    href={href}
-    className={`text-sm font-medium transition-colors hover:text-primary ${
+const NavItem = ({ to, children, active }) => (
+  <Link
+    to={to}
+    className={`text-base font-semibold transition-colors hover:text-primary ${
       active ? "text-primary" : "text-gray-500"
     }`}
   >
     {children}
-  </a>
-);
+  </Link>
+)
 
 const NavData = [
   {
     label: "Beranda",
-    href: "/",
-    active: true,
+    to: "/",
   },
   {
     label: "Hewan dan Tumbuhan",
-    href: "/flora-fauna",
-    active: true,
+    to: "/flora-fauna",
   },
   {
     label: "Arsip",
-    href: "/arsip",
-    active: true,
+    to: "/arsip",
   },
   {
     label: "Poca",
-    href: "/poca",
-    active: true,
+    to: "/poca",
   },
-];
+]
 
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+export default function DynamicNavbar() {
+  const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
+
+  const isActive = (to) => {
+    if (to === "/" && location.pathname === "/") return true
+    if (to !== "/" && location.pathname.startsWith(to)) return true
+    return false
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-24 p-9 items-center">
         <div className="mr-4 hidden md:flex">
-          <a href="/" className="mr-6 flex items-center space-x-2">
+          <Link to="/" className="mr-6 flex items-center space-x-2">
             <img
-              src="https://www.bali-zoo.com/_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=256&q=75"
+              src="src/assets/Logo/LOGO.png"
               alt="Bali Zoo"
-              className="h-12 w-auto"
+              className="h-auto w-20"
             />
-          </a>
+          </Link>
           <div className="flex items-center mr-12 space-x-6 text-sm font-medium">
             {NavData.map((data) => (
-              <NavItem key={data.label} href={data.href} active={data.active}>
+              <NavItem
+                key={data.label}
+                to={data.to}
+                active={isActive(data.to)}
+              >
                 {data.label}
               </NavItem>
             ))}
@@ -81,7 +84,11 @@ export default function Navbar() {
           <SheetContent side="left" className="pr-0">
             <nav className="flex flex-col space-y-4">
               {NavData.map((data) => (
-                <NavItem key={data.label} href={data.href} active={data.active}>
+                <NavItem
+                  key={data.label}
+                  to={data.to}
+                  active={isActive(data.to)}
+                >
                   {data.label}
                 </NavItem>
               ))}
@@ -95,22 +102,8 @@ export default function Navbar() {
               className="hidden md:inline-flex h-8 w-[150px] lg:w-[250px]"
             />
           </div>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="h-8 w-8 px-0">
-                <Search className="h-4 w-4 md:hidden" />
-                <span className="hidden md:inline-flex">ID</span>
-                <ChevronDown className="hidden md:inline-flex ml-1 h-3 w-3" />
-                <span className="sr-only">Toggle language</span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem>ID</DropdownMenuItem>
-              <DropdownMenuItem>EN</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
         </div>
       </div>
     </header>
-  );
+  )
 }

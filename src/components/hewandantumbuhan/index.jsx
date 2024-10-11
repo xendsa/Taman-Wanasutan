@@ -69,7 +69,7 @@ export default function AnimalSection() {
               <img
                 src={animal.src}
                 alt={animal.alt}
-                className="h-full w-full object-cover transition-transform duration-300 hover:scale-110"
+                className="h-64 w-full object-cover transition-transform duration-300 hover:scale-110"
               />
             </div>
           </a>

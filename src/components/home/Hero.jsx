@@ -10,12 +10,12 @@ import { Button } from "@/components/ui/button";
 const slides = [
     {
         image:
-        "https://awsimages.detik.net.id/community/media/visual/2017/12/06/6414c1ae-fcd1-49a6-8316-4a71c29f93ff_43.jpg?w=600&q=90",
+        "src/assets/images/IMG_4517.PNG",
         title: "MULAI PETUALANGAN",
         subtitle: "Jelajahi Keindahan Alam Bersama Satwa",
     },
     {
-        image: "https://warbis.id/assets/images/product/1626693084.png",
+        image: "https://dashboard.bali-zoo.com/storage/photos/1/Home/Slider Information/Slide/Slider-3 Mobile.jpg",
         title: "TEMUKAN KEAJAIBAN",
         subtitle: "Lihat Hewan Eksotis dari Dekat",
     },
@@ -63,7 +63,7 @@ export default function Hero() {
             />
             
             <div className="absolute inset-0 bg-black bg-opacity-40">
-                <div className="container mx-auto h-full px-4">
+                <div className="container mx-auto h-full px-16 -mt-[2em]">
                 <div className="flex h-full flex-col justify-center text-white">
                     <h1 className="mb-2 text-5xl font-bold">{slide.title}</h1>
                     <p className="mb-4 text-xl">{slide.subtitle}</p>
@@ -83,7 +83,7 @@ export default function Hero() {
 
         <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/30 p-2 text-white hover:bg-white/50"
+            className="absolute left-4 top-1/2 -mt-10/2 -translate-y-1/2 rounded-full bg-white/30 p-2 text-white hover:bg-white/50"
         >
             <ChevronLeft className="h-6 w-6" />
         </button>
@@ -104,13 +104,6 @@ export default function Hero() {
                 }`}
             />
             ))}
-        </div>
-
-        
-
-
-        <div className="absolute right-0 top-0 bg-[#ff9800] px-4 py-2 text-white">
-            PESAN SEKARANG
         </div>
         </div>
     );
