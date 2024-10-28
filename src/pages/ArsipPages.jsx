@@ -1,9 +1,11 @@
+import ArsipSection from "@components/arsip";
+
 function ArsipPages() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <div>
+      <ArsipSection />
+    </div>
+  );
 }
 
-export default ArsipPages
+export default ArsipPages;

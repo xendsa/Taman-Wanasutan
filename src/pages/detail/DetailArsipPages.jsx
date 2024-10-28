@@ -1,9 +1,11 @@
+import DetailArsip from "@components/arsip/DetailArsip";
+
 function DetailArsipPages() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <div>
+      <DetailArsip />
+    </div>
+  );
 }
 
-export default DetailArsipPages
+export default DetailArsipPages;

@@ -55,8 +55,7 @@ export default function AnimalSection() {
             key={animal}
             variant={activeFilter === animal ? "default" : "secondary"}
             className="cursor-pointer"
-            onClick={() => setActiveFilter(animal)}
-          >
+            onClick={() => setActiveFilter(animal)}>
             {animal}
           </Badge>
         ))}
