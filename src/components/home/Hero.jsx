@@ -29,7 +29,7 @@ const slides = [
 
 export default function Hero() {
     const [currentSlide, setCurrentSlide] = useState(0);
-    const [currentSlide, setCurrentSlide] = useState(0);
+  
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -41,10 +41,7 @@ export default function Hero() {
     const nextSlide = () => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
     };
-    const nextSlide = () => {
-        setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    };
-
+ 
     const prevSlide = () => {
         setCurrentSlide(
         (prevSlide) => (prevSlide - 1 + slides.length) % slides.length
