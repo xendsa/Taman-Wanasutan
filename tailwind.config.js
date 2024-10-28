@@ -1,9 +1,12 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 export default {
     darkMode: ["class"],
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		extend: {
+			
+			transform: ['hover', 'focus'],
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -53,5 +56,8 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		require("@tailwindcss/line-clamp"),
+	],
 };
