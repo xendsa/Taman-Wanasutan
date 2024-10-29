@@ -1,51 +1,22 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { animalDataDummy } from "@/utils/dummy";
 
 const animals = [
   "ALL ANIMAL",
-  "PENYU",
-  "KUKANG",
-  "LANDAK",
-  "ORANG UTAN",
-  "MEERKAT",
-  "KUBUNG",
-  "KOMODO",
-  "DUBUK",
-  "GAJAH",
-  "BUAYA",
-  "AYAM",
-  "BURUNG",
-  "BERUANG",
-  "RUSA",
-  "BINTURONG",
-  "KAMBING",
-  "IGUANA",
-  "BAHASA JAWA",
-  "SINGA",
-  "KELELAWAR",
-  "KUCING CARACAL",
-  "BEBEK MANDARIN",
-  "MONYET KECIL",
-  "KANCIL",
-  "MUSANG",
-  "BURUNG UNTA",
-  "SIAMANG",
-  "MERAK",
-  "PELICAN",
-  "ANJING PERRY",
-  "KUDA PONI SHETLAND",
-  "SITATUNGA",
-  "ULAR",
-  "GULA GLIDER",
-  "HARIMAU",
-  "WALLABY",
-  "BABI HUTAN",
-  "ZEBRA",
+  "MONYET",
+  "KURA KURA",
+  "BURUNG DARA",
+  "BURUNG HANTU",
 ];
 
 export default function AnimalSection() {
   const [activeFilter, setActiveFilter] = useState("ALL ANIMAL");
+
+  const filteredAnimals =
+    activeFilter === "ALL ANIMAL"
+      ? animalDataDummy
+      : animalDataDummy.filter((animal) => animal.category === activeFilter);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -55,20 +26,25 @@ export default function AnimalSection() {
             key={animal}
             variant={activeFilter === animal ? "default" : "secondary"}
             className="cursor-pointer"
-            onClick={() => setActiveFilter(animal)}>
+            onClick={() => setActiveFilter(animal)}
+          >
             {animal}
           </Badge>
         ))}
       </div>
 
-      <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-        {animalDataDummy.map((animal, index) => (
-          <a key={index} href={`flora-fauna/detail/${animal.slug}`}>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        {filteredAnimals.map((animal, index) => (
+          <a
+            key={index}
+            href={`flora-fauna/detail/${animal.slug}`}
+            className="block"
+          >
             <div className="overflow-hidden rounded-lg">
               <img
                 src={animal.src}
                 alt={animal.alt}
-                className="h-full w-full object-cover transition-transform duration-300 hover:scale-110"
+                className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover transition-transform duration-300 hover:scale-110"
               />
             </div>
           </a>
