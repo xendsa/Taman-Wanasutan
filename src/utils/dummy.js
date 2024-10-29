@@ -6,7 +6,7 @@ export const animalDataDummy = [
     src: "https://tanilink.com/uploads/berita/2019-04-15/40437356_1879616295466619_6493002911366543558_n.jpg",
     alt: "Orangutan",
     slug: "orangutan",
-    badge: "hewan",
+    badge: "HEWAN",
     category: "MONYET",
   },
   {
@@ -16,6 +16,7 @@ export const animalDataDummy = [
     src: "https://d1bpj0tv6vfxyp.cloudfront.net/articles/7891_6-5-2021_18-27-24.webp",
     alt: "Deer",
     slug: "shikanoko",
+    badge: "HEWAN",
     category: "BURUNG DARA",
   },
   {
@@ -25,6 +26,7 @@ export const animalDataDummy = [
     src: "https://agrotanisejahtera.co.id/wp-content/uploads/2024/02/Pohon-Hias-Ketapang-Kencana-Untuk-Penghijauan.jpg",
     alt: "Bat",
     slug: "burung-dara",
+    badge: "HEWAN",
     category: "KURA KURA",
   },
   {
@@ -34,6 +36,7 @@ export const animalDataDummy = [
     src: "https://awsimages.detik.net.id/community/media/visual/2017/12/06/6414c1ae-fcd1-49a6-8316-4a71c29f93ff_43.jpg?w=600&q=90",
     alt: "Bat hanging",
     slug: "ayam",
+    badge: "HEWAN",
     category: "MONYET",
   },
   {
@@ -43,6 +46,7 @@ export const animalDataDummy = [
     src: "https://warbis.id/assets/images/product/1626693084.png",
     alt: "Bear",
     slug: "burung-hantu",
+    badge: "HEWAN",
     category: "BURUNG HANTU",
   },
   {
@@ -52,6 +56,7 @@ export const animalDataDummy = [
     src: "https://warbis.id/assets/images/product/1626693084.png",
     alt: "Sun Bear",
     slug: "real-madrid",
+    badge: "HEWAN",
     category: "MONYET",
   },
   {
@@ -61,6 +66,7 @@ export const animalDataDummy = [
     src: "https://warbis.id/assets/images/product/1626693084.png",
     alt: "Guinea Fowl",
     slug: "bayern-munchen",
+    badge: "HEWAN",
     category: "BURUNG KAKAKTUA",
   },
   {
