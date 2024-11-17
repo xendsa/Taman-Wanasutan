@@ -33,7 +33,7 @@ function WanasutanProgram() {
     return (
         <div className="relative w-full mx-auto overflow-hidden ">
             <div className="flex flex-col justify-center items-center h-64 py-8 space-y-2">
-                <h3 className="text-xl text-amber-500 md:text-2xl font-bold">Our Galery View</h3>
+                <h3 className="text-xl text-amber-500 md:text-4xl font-bold">Our Galery View</h3>
                 <p className="text-xs md:text-base text-center px-4">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam ea veritatis blanditiis aut ex temporibus similique magnam vero, ratione beatae iusto iste ullam rerum ab assumenda id adipisci neque error?
                 </p>
