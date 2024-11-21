@@ -7,6 +7,7 @@ import DetailFloraPages from "@pages/detail/DetailFloraPages";
 import DetailArsipPages from "@pages/detail/DetailArsipPages";
 import FloraFaunaPages from "@pages/FloraFaunaPages";
 import PocaPage from "@pages/PocaPage";
+import MapsWanasutanPage from "@pages/MapsWanasutanPage";
 
 export default function AppRoutes() {
   return (
@@ -19,6 +20,7 @@ export default function AppRoutes() {
         <Route path="flora-fauna/detail/:slug" element={<DetailFloraPages />} />
         <Route path="arsip/detail/:id" element={<DetailArsipPages />} />
         <Route path="poca" element={<PocaPage />} />
+		<Route path="maps-wanasutan" element={<MapsWanasutanPage />} />
       </Route>
     </Routes>
   );

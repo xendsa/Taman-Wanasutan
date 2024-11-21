@@ -1,16 +1,18 @@
-
-import React, { useState, useEffect } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { Menu, Search, ChevronDown } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, Search, ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+} from "@/components/ui/dropdown-menu";
+import { Input } from "@/components/ui/input";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+
+// Impor gambar lokal
+import Logo from "@/assets/Logo/Logo.png";
 
 const NavItem = ({ to, children, active }) => (
   <Link
@@ -21,7 +23,7 @@ const NavItem = ({ to, children, active }) => (
   >
     {children}
   </Link>
-)
+);
 
 const NavData = [
   {
@@ -40,26 +42,27 @@ const NavData = [
     label: "Poca",
     to: "/poca",
   },
-]
+];
 
 export default function DynamicNavbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const location = useLocation()
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const isActive = (to) => {
-    if (to === "/" && location.pathname === "/") return true
-    if (to !== "/" && location.pathname.startsWith(to)) return true
-    return false
-  }
+    if (to === "/" && location.pathname === "/") return true;
+    if (to !== "/" && location.pathname.startsWith(to)) return true;
+    return false;
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-24 p-9 items-center">
         <div className="mr-4 hidden md:flex">
           <Link to="/" className="mr-6 flex items-center space-x-2">
+            {/* Ganti sumber gambar dengan import lokal */}
             <img
-              src="https://www.bali-zoo.com/_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=256&q=75"
-              alt="Bali Zoo"
+              src={Logo}
+              alt="Wanasutan Logo"
               className="h-12 w-auto"
             />
           </Link>
@@ -124,5 +127,5 @@ export default function DynamicNavbar() {
         </div>
       </div>
     </header>
-  )
+  );
 }
