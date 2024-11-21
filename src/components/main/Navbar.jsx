@@ -1,16 +1,18 @@
-
-import React, { useState, useEffect } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { Menu, Search, ChevronDown } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, Search, ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+} from "@/components/ui/dropdown-menu";
+import { Input } from "@/components/ui/input";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+
+// Impor gambar lokal
+import Logo from "@/assets/Logo/Logo.png";
 
 const NavItem = ({ to, children, active }) => (
   <Link
@@ -45,17 +47,17 @@ const NavData = [
     label: "Poca",
     to: "/poca",
   },
-]
+];
 
 export default function DynamicNavbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const location = useLocation()
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const isActive = (to) => {
-    if (to === "/" && location.pathname === "/") return true
-    if (to !== "/" && location.pathname.startsWith(to)) return true
-    return false
-  }
+    if (to === "/" && location.pathname === "/") return true;
+    if (to !== "/" && location.pathname.startsWith(to)) return true;
+    return false;
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
