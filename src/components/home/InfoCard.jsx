@@ -29,7 +29,7 @@ const InfoCards = () => {
                             </p> 
                         </div>
                     </div>
-                </div>
+                </Link>
             ))}
         </div>
     );

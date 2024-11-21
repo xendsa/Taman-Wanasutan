@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, Search, ChevronDown } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -23,24 +23,19 @@ const NavItem = ({ to, children, active }) => (
   >
     {children}
   </Link>
-)
-  </Link>
-)
+);
 
 const NavData = [
   {
     label: "Beranda",
     to: "/",
-    to: "/",
   },
   {
     label: "Hewan dan Tumbuhan",
     to: "/flora-fauna",
-    to: "/flora-fauna",
   },
   {
     label: "Arsip",
-    to: "/arsip",
     to: "/arsip",
   },
   {
@@ -61,24 +56,17 @@ export default function DynamicNavbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-24 p-9 items-center">
+      <div className="container flex h-24 items-center p-9">
         <div className="mr-4 hidden md:flex">
           <Link to="/" className="mr-6 flex items-center space-x-2">
-          <Link to="/" className="mr-6 flex items-center space-x-2">
             <img
-              src="src/assets/Logo/LOGO.png"
-              alt="Bali Zoo"
+              src={Logo}
+              alt="Logo"
               className="h-auto w-20"
             />
           </Link>
-          </Link>
-          <div className="flex items-center mr-12 space-x-6 text-sm font-medium">
+          <div className="flex items-center space-x-6 text-sm font-medium">
             {NavData.map((data) => (
-              <NavItem
-                key={data.label}
-                to={data.to}
-                active={isActive(data.to)}
-              >
               <NavItem
                 key={data.label}
                 to={data.to}
@@ -108,27 +96,22 @@ export default function DynamicNavbar() {
                   to={data.to}
                   active={isActive(data.to)}
                 >
-                <NavItem
-                  key={data.label}
-                  to={data.to}
-                  active={isActive(data.to)}
-                >
                   {data.label}
                 </NavItem>
               ))}
             </nav>
           </SheetContent>
         </Sheet>
+
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
           <div className="w-full flex-1 md:w-auto md:flex-none">
             <Input
               placeholder="Search..."
-              className="hidden md:inline-flex h-8 w-[150px] lg:w-[250px]"
+              className="hidden h-8 w-[150px] md:inline-flex lg:w-[250px]"
             />
           </div>
         </div>
       </div>
     </header>
-  )
-  )
+  );
 }
