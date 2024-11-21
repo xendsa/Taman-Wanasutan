@@ -12,7 +12,7 @@ const GalleryPanel = () => {
   };
 
   const handleNavigation = () => {
-    navigate("/about");
+    navigate("/flora-fauna");
   };
 
   return (

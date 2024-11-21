@@ -9,4 +9,4 @@ function PocaPage (){
     )
 }
 
-export default PocaPage
+export default FloraFaunaPages;

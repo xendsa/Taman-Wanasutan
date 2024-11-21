@@ -22,18 +22,23 @@ const NavItem = ({ to, children, active }) => (
     {children}
   </Link>
 )
+  </Link>
+)
 
 const NavData = [
   {
     label: "Beranda",
     to: "/",
+    to: "/",
   },
   {
     label: "Hewan dan Tumbuhan",
     to: "/flora-fauna",
+    to: "/flora-fauna",
   },
   {
     label: "Arsip",
+    to: "/arsip",
     to: "/arsip",
   },
   {
@@ -57,14 +62,21 @@ export default function DynamicNavbar() {
       <div className="container flex h-24 p-9 items-center">
         <div className="mr-4 hidden md:flex">
           <Link to="/" className="mr-6 flex items-center space-x-2">
+          <Link to="/" className="mr-6 flex items-center space-x-2">
             <img
-              src="https://www.bali-zoo.com/_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=256&q=75"
+              src="src/assets/Logo/LOGO.png"
               alt="Bali Zoo"
-              className="h-12 w-auto"
+              className="h-auto w-20"
             />
+          </Link>
           </Link>
           <div className="flex items-center mr-12 space-x-6 text-sm font-medium">
             {NavData.map((data) => (
+              <NavItem
+                key={data.label}
+                to={data.to}
+                active={isActive(data.to)}
+              >
               <NavItem
                 key={data.label}
                 to={data.to}
@@ -94,6 +106,11 @@ export default function DynamicNavbar() {
                   to={data.to}
                   active={isActive(data.to)}
                 >
+                <NavItem
+                  key={data.label}
+                  to={data.to}
+                  active={isActive(data.to)}
+                >
                   {data.label}
                 </NavItem>
               ))}
@@ -107,22 +124,9 @@ export default function DynamicNavbar() {
               className="hidden md:inline-flex h-8 w-[150px] lg:w-[250px]"
             />
           </div>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="h-8 w-8 px-0">
-                <Search className="h-4 w-4 md:hidden" />
-                <span className="hidden md:inline-flex">ID</span>
-                <ChevronDown className="hidden md:inline-flex ml-1 h-3 w-3" />
-                <span className="sr-only">Toggle language</span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem>ID</DropdownMenuItem>
-              <DropdownMenuItem>EN</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
         </div>
       </div>
     </header>
+  )
   )
 }
