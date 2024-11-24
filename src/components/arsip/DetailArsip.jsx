@@ -12,14 +12,24 @@ export default function DetailArsip() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold mb-6">{archive.title}</h2>
-      <img
-        src={archive.src}
-        alt={archive.alt}
-        className="w-full h-64 object-cover mb-4 rounded-lg sm:h-80 md:h-96 lg:h-[500px]"
-      />
-      <p className="text-lg text-gray-700 mb-4">{archive.description}</p>
-      <Badge variant="outline">{archive.category}</Badge>
+      <h2 className="text-3xl font-bold mb-6 text-center">{archive.title}</h2>
+      <div className="flex justify-center">
+        <img
+          src={archive.src}
+          alt={archive.alt}
+          className="w-full max-w-4xl h-64 object-cover mb-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 sm:h-80 md:h-96 lg:h-[500px]"
+        />
+      </div>
+      <div className="flex justify-center">
+        <p className="text-lg text-gray-700 mb-6 px-4 text-center max-w-2xl">
+          {archive.description}
+        </p>
+      </div>
+      <div className="flex justify-center">
+        <Badge variant="outline" className="text-gray-500 border-gray-300">
+          {archive.category}
+        </Badge>
+      </div>
     </div>
   );
 }
