@@ -20,7 +20,7 @@ export default function AppRoutes() {
         <Route path="flora-fauna/detail/:slug" element={<DetailFloraPages />} />
         <Route path="arsip/detail/:id" element={<DetailArsipPages />} />
         <Route path="poca" element={<PocaPage />} />
-		<Route path="maps-wanasutan" element={<MapsWanasutanPage />} />
+        <Route path="maps-wanasutan" element={<MapsWanasutanPage />} />
       </Route>
     </Routes>
   );
