@@ -71,8 +71,7 @@ export default function ArchiveSection() {
             key={archive}
             variant={activeFilter === archive ? "default" : "secondary"}
             className="cursor-pointer text-sm px-4 py-2 transition-all duration-300 hover:scale-105"
-            onClick={() => setActiveFilter(archive)}
-          >
+            onClick={() => setActiveFilter(archive)}>
             {archive}
           </Badge>
         ))}
@@ -82,8 +81,7 @@ export default function ArchiveSection() {
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
+        transition={{ duration: 0.5 }}>
         {filteredArchives.map((arsip) => (
           <a
             key={arsip.id}
@@ -93,8 +91,7 @@ export default function ArchiveSection() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 bg-white"
-          >
+            className="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 bg-white">
             <img
               src={arsip.src}
               alt={arsip.alt}
